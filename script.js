@@ -6,11 +6,11 @@
 (function typewriter() {
   const el = document.getElementById('typewriter');
   const phrases = [
-    'AI Researcher',
+    'CS Student',
     'Woman in STEM',
-    'Builder at AI&',
-    'Tech with Heart',
-    'Future Architect',
+    'Johns Hopkins',
+    'Robotics',
+    'Future Engineer',
   ];
   let idx = 0, char = 0, deleting = false, paused = false;
 
