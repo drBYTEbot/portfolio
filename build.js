@@ -268,7 +268,7 @@ window.addEventListener('load', () => {
   let speaking = false;
   let utterance = null;
 
-  const text = "I'm Saria Malik, a cognitive science and writing seminars double major at the Johns Hopkins University, driven by the belief that the most powerful technology lives at the intersection of mind, language, and creativity. My work spans cognitive science, writing, programming, and robotics. I'm passionate about research, team leadership, and engineering that's infused with curiosity and craft. I'm also a U.S. Congressional App Challenge winner, a Clark Scholars Peer Leader at JHU, and a proud WISE program alum. Whether I'm developing software at nVeris Tech, leading workshops for incoming scholars, or exploring performing arts, I bring the same principle to everything: the engineer builds what the artist imagines.";
+  const text = "I'm Saria Malik, a cognitive science and writing seminars double major at Johns Hopkins University, driven by the belief that the most powerful technology lives at the intersection of mind, language, and creativity. My work spans cognitive science, writing, programming, and robotics. I'm passionate about research, team leadership, and engineering that's infused with curiosity and craft. I'm a U.S. Congressional App Challenge winner, a Cummings Scholar and Clark Scholar serving on the Student Leadership Board at JHU, and a proud WISE program alum. Whether I'm engineering AI systems at AI&, developing software at nVeris Tech, or exploring performing arts, I bring the same principle to everything: the engineer builds what the artist imagines.";
 
   btn.addEventListener('click', () => {
     if (speaking) {
@@ -296,9 +296,9 @@ window.addEventListener('load', () => {
 // --- SOUND EFFECTS ---
 (function sounds() {
   const toggle = document.getElementById('soundToggle');
-  let muted = true;
+  let muted = false;
   if (toggle) {
-    toggle.classList.add('muted');
+    toggle.classList.remove('muted');
     toggle.addEventListener('click', () => {
       muted = !muted;
       toggle.classList.toggle('muted', muted);
