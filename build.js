@@ -71,8 +71,8 @@ window.addEventListener('load', () => {
   const el = document.getElementById('rotatingText');
   if (!el) return;
   const roles = [
-    'AI Engineer', 'Robotics Researcher', 'Creative Technologist',
-    'Future PhD Candidate', 'Problem Solver', 'Digital Creator'
+    'AI Engineer', 'Cognitive Science', 'Creative Technologist',
+    'Future PhD Candidate', 'Problem Solver', 'Writer & Technologist'
   ];
   let i = 0;
   function rotate() {
@@ -268,7 +268,7 @@ window.addEventListener('load', () => {
   let speaking = false;
   let utterance = null;
 
-  const text = "I'm Saria Malik, an aspiring computer scientist at the Johns Hopkins Whiting School of Engineering, driven by the belief that the most powerful technology lives at the intersection of logic and creativity. My work spans programming, algorithm design, and robotics. I'm passionate about research, team leadership, and engineering that's infused with curiosity and craft. I'm also a U.S. Congressional App Challenge winner, a Clark Scholars Peer Leader at JHU, and a proud WISE program alum. Whether I'm developing software at nVeris Tech, leading workshops for incoming scholars, or exploring performing arts, I bring the same principle to everything: the engineer builds what the artist imagines.";
+  const text = "I'm Saria Malik, a cognitive science and writing seminars double major at the Johns Hopkins University, driven by the belief that the most powerful technology lives at the intersection of mind, language, and creativity. My work spans cognitive science, writing, programming, and robotics. I'm passionate about research, team leadership, and engineering that's infused with curiosity and craft. I'm also a U.S. Congressional App Challenge winner, a Clark Scholars Peer Leader at JHU, and a proud WISE program alum. Whether I'm developing software at nVeris Tech, leading workshops for incoming scholars, or exploring performing arts, I bring the same principle to everything: the engineer builds what the artist imagines.";
 
   btn.addEventListener('click', () => {
     if (speaking) {
