@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saria Malik | AI Engineer & Creative Technologist</title>
+  <meta name="description" content="Saria Malik — Cognitive Science & Writing Seminars at Johns Hopkins University. AI, robotics, research, and creative technology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="build.css">
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <span class="loader-text">Initializing</span>
+    </div>
+  </div>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-sigil">&#9826;</span>
+        <span class="nav-logo-text">Saria Malik</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#ai-research">AI & Research</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#ai-research" class="mobile-link">AI & Research</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge" data-reveal>AI &bull; Robotics &bull; Research</div>
+      <h1 data-reveal>
+        <span class="hero-greeting">Hello, I'm</span>
+        <span class="hero-name">Saria Malik</span>
+      </h1>
+      <div class="hero-rotating" data-reveal>
+        <span class="rotating-label">I build as a</span>
+        <span class="rotating-text" id="rotatingText">AI Engineer</span>
+      </div>
+      <p class="hero-tagline" data-reveal>Cognitive Science &amp; Writing Seminars at <strong>Johns Hopkins University</strong> &mdash; Baltimore, MD</p>
+      <div class="hero-cta" data-reveal>
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#about" class="btn btn-outline">Explore My Journey</a>
+        <a href="#contact" class="btn btn-ghost">Connect With Me</a>
+      </div>
+      <div class="hero-scroll" data-reveal>
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+    <div class="hero-marquee">
+      <span>Python &middot; Java &middot; Algorithms &middot; Robotics &middot; TypeScript &middot; JavaScript &middot; AI &middot; Research &middot; </span>
+      <span>Python &middot; Java &middot; Algorithms &middot; Robotics &middot; TypeScript &middot; JavaScript &middot; AI &middot; Research &middot; </span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">01</span>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <p>
+            I'm <strong>Saria Malik</strong> &mdash; a cognitive science and writing seminars double major at the
+            <strong>Johns Hopkins Whiting School of Engineering</strong>, driven by the belief that
+            the most powerful technology lives at the intersection of logic and creativity.
+          </p>
+          <p>
+            My work spans cognitive science, writing, programming, and robotics. I'm passionate about
+            research, team leadership, and engineering that's infused with curiosity and craft.
+            I'm also a <strong>U.S. Congressional App Challenge winner</strong> (Maryland's 2nd District, 2023&ndash;2024),
+            a <strong>Clark Scholars Peer Leader</strong> at JHU, and a proud <strong>WISE program alum</strong>.
+          </p>
+          <p>
+            Whether I'm developing software at <strong>nVeris Tech</strong>, leading workshops for
+            incoming scholars, or exploring performing arts with <strong>Anna Deavere Smith</strong>,
+            I bring the same principle to everything: <em>the engineer builds what the artist imagines</em>.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-count="3">0</span>
+              <span class="stat-label">Repos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="2028">0</span>
+              <span class="stat-label">Grad Year</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="1">0</span>
+              <span class="stat-label">University</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="5">0</span>
+              <span class="stat-label">Awards</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card" data-reveal>
+          <div class="ac-header">
+            <div class="ac-line"></div>
+            <div class="ac-body">
+              <div class="ac-row"><span class="ac-key">Name</span><span class="ac-val">Saria Malik</span></div>
+              <div class="ac-row"><span class="ac-key">Major</span><span class="ac-val">CogSci &amp; Writing Seminars</span></div>
+              <div class="ac-row"><span class="ac-key">School</span><span class="ac-val">Johns Hopkins Univ.</span></div>
+              <div class="ac-row"><span class="ac-key">Location</span><span class="ac-val">Baltimore, MD</span></div>
+              <div class="ac-row"><span class="ac-key">Focus</span><span class="ac-val">CogSci, AI, Writing</span></div>
+              <div class="ac-row"><span class="ac-key">Grad</span><span class="ac-val">2028</span></div>
+            </div>
+          </div>
+          <button class="tts-btn" id="ttsBtn" aria-label="Listen to about section">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            <span>Listen</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ARTIST + ENGINEER FUSION ===== -->
+  <section id="fusion">
+    <canvas id="fusionCanvas"></canvas>
+    <div class="container">
+      <div class="fusion-grid">
+        <div class="fusion-side fusion-artist" data-reveal>
+          <span class="fusion-label">Artist</span>
+          <ul>
+            <li>Creativity</li>
+            <li>Design</li>
+            <li>Visual Storytelling</li>
+            <li>Expression</li>
+          </ul>
+        </div>
+        <div class="fusion-center" data-reveal>
+          <div class="fusion-symbol">&#9826;</div>
+          <p>The engineer builds what<br>the artist imagines.</p>
+          <p class="fusion-sub">The artist refines what<br>the engineer builds.</p>
+        </div>
+        <div class="fusion-side fusion-engineer" data-reveal>
+          <span class="fusion-label">Engineer</span>
+          <ul>
+            <li>Logic</li>
+            <li>AI & Robotics</li>
+            <li>Problem Solving</li>
+            <li>Systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE TIMELINE ===== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">02</span>
+        <h2>Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item" data-reveal>
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <span class="tl-date">Jun 2026 &mdash; Present</span>
+              <h3>AI Engineering Intern</h3>
+              <span class="tl-org">AI&amp;</span>
+            </div>
+            <p>Working on AI systems and engineering projects at the intersection of artificial intelligence and creative technology.</p>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <span class="tl-date">Jul 2025 &mdash; Aug 2025</span>
+              <h3>Software Development Intern</h3>
+              <span class="tl-org">nVeris Tech</span>
+            </div>
+            <p>Contributed to the Pulse app — a VSM application focused on UI/UX design, backend testing, and agile workflow in a professional tech team.</p>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <span class="tl-date">2025 &mdash; Present</span>
+              <h3>Student Leadership Board</h3>
+              <span class="tl-org">Cummings Scholars &amp; Clark Scholars &mdash; Johns Hopkins University</span>
+            </div>
+            <p>Serving on the Cummings Scholars Student Leadership Board while also serving as a Clark Scholars Peer Leader. Mentoring incoming scholars, leading orientation and academic prep sessions, and fostering community excellence.</p>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <span class="tl-date">Summer 2023 &mdash; 2024</span>
+              <h3>WISE Research Intern</h3>
+              <span class="tl-org">Johns Hopkins Whiting School of Engineering</span>
+            </div>
+            <p>Selected for the Whiting Internships in Science and Engineering (WISE) program. Worked directly with a JHU graduate mentor on engineering research projects over the course of a year.</p>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <span class="tl-date">Aug 2023 &mdash; Present</span>
+              <h3>Anna Deavere Smith Teen Pipeline</h3>
+              <span class="tl-org">Performing Arts Intensive &mdash; California</span>
+            </div>
+            <p>Selected for an ongoing intensive exploring storytelling through movement, voice, and lived experience with renowned artist Anna Deavere Smith. Growing as a speaker, artist, and communicator.</p>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <span class="tl-date">2025</span>
+              <h3>"Be the Bridge" Ambassador</h3>
+              <span class="tl-org">Code in the Schools &mdash; Baltimore</span>
+            </div>
+            <p>Working as an ambassador to bridge the gap between Baltimore youth and technology education. Promoting STEM access, leading outreach initiatives, and fostering inclusive tech pathways for underserved communities.</p>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <span class="tl-date">2023&ndash;2024</span>
+              <h3>Congressional App Challenge Winner</h3>
+              <span class="tl-org">Maryland's 2nd District</span>
+            </div>
+            <p>Won the U.S. Congressional App Challenge for building the Patrol App &mdash; a tool to improve public safety. Presented to congressional leaders and received formal recognition from Congressman Dutch Ruppersberger.</p>
+          </div>
+        </div>
+        <div class="tl-item" data-reveal>
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <span class="tl-date">2024 &mdash; 2028</span>
+              <h3>B.A. Cognitive Science &amp; Writing Seminars</h3>
+              <span class="tl-org">Johns Hopkins University</span>
+            </div>
+            <p>Exploring the intersection of mind, language, and technology through cognitive science alongside creative and analytical writing. Engaged in undergraduate research and STEM advocacy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">03</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="project-filters" data-reveal>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="robotics">Robotics</button>
+        <button class="filter-btn" data-filter="software">Software</button>
+        <button class="filter-btn" data-filter="research">Research</button>
+      </div>
+      <div class="project-grid">
+        <div class="project-card" data-category="software" data-reveal>
+          <div class="pc-num">01</div>
+          <h3>Pulse</h3>
+          <p>A VSM (Value Stream Management) application built during my internship at nVeris Tech. Contributed to UI/UX design, backend testing, and feature development in an agile team environment.</p>
+          <div class="pc-tags">
+            <span>UI/UX</span>
+            <span>Full-Stack</span>
+            <span>Agile</span>
+          </div>
+          <div class="pc-achievement">&#9733; nVeris Tech &bull; 2025</div>
+        </div>
+        <div class="project-card" data-category="software ai" data-reveal>
+          <div class="pc-num">02</div>
+          <h3>Patrol App</h3>
+          <p>Congressional App Challenge winning project. A public safety tool designed to improve community security. Presented to U.S. congressional leaders and recognized by Congressman Dutch Ruppersberger.</p>
+          <div class="pc-tags">
+            <span>Python</span>
+            <span>Public Safety</span>
+            <span>UI/UX</span>
+          </div>
+          <div class="pc-achievement">&#9733; CAC Winner &bull; MD-02</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI & RESEARCH ===== -->
+  <section id="ai-research">
+    <canvas id="neuralCanvas"></canvas>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">04</span>
+        <h2>AI &amp; Research</h2>
+      </div>
+      <div class="research-grid">
+        <div class="research-card" data-reveal>
+          <div class="research-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 0 1 10 10c0 2.5-1 4.8-2.5 6.5"/><path d="M12 2a10 10 0 0 0-10 10c0 2.5 1 4.8 2.5 6.5"/><path d="M2 12h20"/><path d="M12 22a10 10 0 0 1-7.5-3.5"/><path d="M12 22a10 10 0 0 0 7.5-3.5"/></svg>
+          </div>
+          <h3>Artificial Intelligence</h3>
+          <p>Deeply interested in the intersection of machine learning, natural language processing, and ethical AI development. Exploring how models can understand and augment human capabilities.</p>
+        </div>
+        <div class="research-card" data-reveal>
+          <div class="research-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Robotics</h3>
+          <p>Passionate about embodied AI and autonomous systems. Fascinated by the challenge of bridging perception, planning, and physical action in real-world environments.</p>
+        </div>
+        <div class="research-card" data-reveal>
+          <div class="research-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>PhD Aspirations</h3>
+          <p>Planning to pursue a PhD at the intersection of cognitive science, AI, and robotics. Driven by the goal of advancing human-robot collaboration and intelligent systems research.</p>
+        </div>
+        <div class="research-card" data-reveal>
+          <div class="research-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3h6v6"/><path d="M15 21H9v-6"/><path d="M21 9v6h-6"/><path d="M3 15V9h6"/></svg>
+          </div>
+          <h3>STEM Advocacy</h3>
+          <p>Committed to increasing women's representation in AI and STEM. Only 22% of AI professionals are women &mdash; I'm working to change that through mentorship and visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GAME SECTION ===== -->
+  <section id="game-section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">&#9733;</span>
+        <h2>The Game That Started My Love for Technology</h2>
+      </div>
+      <div class="game-container" data-reveal>
+        <div class="game-explanation">
+          <p>The Chrome Dinosaur Game was more than just a time-killer. It was my first encounter with procedural generation, reaction-based mechanics, and the magic of something from nothing. A simple T-Rex running across an endless desert — it taught me that the best technology feels invisible.</p>
+        </div>
+        <div class="game-wrapper">
+          <div class="game" id="dinoGame">
+            <div class="game-score">Score: <span id="score">0</span></div>
+            <div class="game-highscore">Best: <span id="highscore">0</span></div>
+            <canvas id="gameCanvas" width="600" height="200"></canvas>
+            <button class="game-start-btn" id="gameStart">Play Game</button>
+            <p class="game-hint">Press <kbd>Space</kbd> or tap to jump</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">05</span>
+        <h2>Connect</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-links" data-reveal>
+          <a href="mailto:saria@aiand.com" class="contact-link">
+            <span class="cl-icon">&#9993;</span>
+            <span class="cl-text">saria@aiand.com</span>
+            <span class="cl-copy" data-copy="saria@aiand.com">Copy</span>
+          </a>
+          <a href="https://github.com/drBYTEbot" target="_blank" rel="noopener" class="contact-link">
+            <span class="cl-icon">&lt;/&gt;</span>
+            <span class="cl-text">github.com/drBYTEbot</span>
+            <span class="cl-verified">Verified</span>
+          </a>
+          <a href="https://linkedin.com/in/sariamalik" target="_blank" rel="noopener" class="contact-link">
+            <span class="cl-icon">&#8855;</span>
+            <span class="cl-text">linkedin.com/in/sariamalik</span>
+            <span class="cl-verified">Verified</span>
+          </a>
+          <a href="https://sariamalik.my.canva.site" target="_blank" rel="noopener" class="contact-link">
+            <span class="cl-icon">&#9671;</span>
+            <span class="cl-text">sariamalik.my.canva.site</span>
+            <span class="cl-verified">Verified</span>
+          </a>
+        </div>
+        <div class="contact-message" data-reveal>
+          <p>Always open to collaborating on interesting projects, research ideas, and conversations at the intersection of art and engineering.</p>
+          <p class="contact-signature">Saria Malik</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Saria Malik &copy; 2026 &mdash; The Artist &amp; The Engineer</p>
+    </div>
+  </footer>
+
+  <script src="build.js"></script>
+</body>
+</html>
