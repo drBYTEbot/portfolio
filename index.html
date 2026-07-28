@@ -360,9 +360,205 @@
         <span class="section-number">03</span>
         <h2>Skills &amp; Tools</h2>
       </div>
-      <div class="skills-grid">
-        <div class="skill-category" data-reveal>
-          <h3 class="skill-cat-title">Languages</h3>
+      <p class="skills-intro" data-reveal>Each region of the brain processes different skills &mdash; hover to explore how mine are wired.</p>
+
+      <div class="brain-wrapper" data-reveal>
+        <!-- SVG Brain -->
+        <svg class="brain-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Brain stem -->
+          <path d="M235 310 Q230 340 240 370 Q250 385 260 370 Q270 340 265 310 Z" 
+                class="brain-region" data-region="stem" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+          <!-- Cerebellum -->
+          <ellipse cx="205" cy="300" rx="35" ry="25" 
+                   class="brain-region" data-region="cerebellum" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+          <!-- Occipital lobe (back) -->
+          <path d="M150 180 Q120 170 115 200 Q115 230 140 250 Q160 255 175 245 Q180 220 175 195 Q168 180 150 180 Z" 
+                class="brain-region" data-region="occipital" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+          <!-- Temporal lobe (lower left) -->
+          <path d="M175 240 Q160 260 170 285 Q190 300 215 295 Q230 280 225 250 Q210 240 175 240 Z" 
+                class="brain-region" data-region="temporal-l" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+          <!-- Temporal lobe (lower right) -->
+          <path d="M325 240 Q340 260 330 285 Q310 300 285 295 Q270 280 275 250 Q290 240 325 240 Z" 
+                class="brain-region" data-region="temporal-r" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+          <!-- Parietal lobe (top) -->
+          <path d="M200 100 Q250 85 300 100 Q310 140 295 170 Q250 180 205 170 Q190 140 200 100 Z" 
+                class="brain-region" data-region="parietal" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+          <!-- Prefrontal cortex (front left) -->
+          <path d="M175 120 Q150 100 155 140 Q165 170 185 180 Q200 175 200 140 Q195 120 175 120 Z" 
+                class="brain-region" data-region="prefrontal-l" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+          <!-- Prefrontal cortex (front right) -->
+          <path d="M325 120 Q350 100 345 140 Q335 170 315 180 Q300 175 300 140 Q305 120 325 120 Z" 
+                class="brain-region" data-region="prefrontal-r" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+          <!-- Central fissure -->
+          <path d="M250 100 Q245 150 250 200 Q255 250 250 300" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="1" stroke-dasharray="3,4"/>
+          <!-- Neuron dots scattered -->
+          <circle cx="220" cy="130" r="1.5" fill="rgba(212,175,55,0.4)"/>
+          <circle cx="280" cy="140" r="1.5" fill="rgba(212,175,55,0.4)"/>
+          <circle cx="180" cy="200" r="1.5" fill="rgba(212,175,55,0.3)"/>
+          <circle cx="320" cy="210" r="1.5" fill="rgba(212,175,55,0.3)"/>
+          <circle cx="250" cy="220" r="2" fill="rgba(212,175,55,0.5)"/>
+          <circle cx="200" cy="270" r="1.5" fill="rgba(212,175,55,0.3)"/>
+          <circle cx="300" cy="270" r="1.5" fill="rgba(212,175,55,0.3)"/>
+          <circle cx="250" cy="340" r="1.5" fill="rgba(212,175,55,0.3)"/>
+        </svg>
+
+        <!-- Region labels (positioned over brain) -->
+        <div class="brain-label" data-region="prefrontal" style="top: 18%; left: 50%; transform: translateX(-50%);">
+          <span class="bl-name">Prefrontal Cortex</span>
+        </div>
+        <div class="brain-label" data-region="parietal" style="top: 8%; left: 50%; transform: translateX(-50%);">
+          <span class="bl-name">Parietal Lobe</span>
+        </div>
+        <div class="brain-label" data-region="temporal" style="top: 55%; left: 18%;">
+          <span class="bl-name">Temporal Lobe</span>
+        </div>
+        <div class="brain-label" data-region="temporal" style="top: 55%; right: 18%;">
+          <span class="bl-name">Temporal Lobe</span>
+        </div>
+        <div class="brain-label" data-region="occipital" style="top: 42%; right: 8%;">
+          <span class="bl-name">Occipital Lobe</span>
+        </div>
+        <div class="brain-label" data-region="cerebellum" style="top: 72%; left: 28%;">
+          <span class="bl-name">Cerebellum</span>
+        </div>
+        <div class="brain-label" data-region="stem" style="top: 80%; left: 50%; transform: translateX(-50%);">
+          <span class="bl-name">Brain Stem</span>
+        </div>
+
+        <!-- Skill clusters positioned around brain -->
+        <!-- Prefrontal: Core Skills (top center) -->
+        <div class="brain-skills" data-region="prefrontal" style="top: 0; left: 50%; transform: translateX(-50%);">
+          <div class="bs-title">Core Skills</div>
+          <div class="bs-tags">
+            <span class="skill-tag">Detail Oriented</span>
+            <span class="skill-tag">Analytical Aptitude</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Conceptual Thinking</span>
+            <span class="skill-tag">Technology</span>
+            <span class="skill-tag">Collaboration</span>
+          </div>
+        </div>
+
+        <!-- Parietal: Specialized Skills (top, below core) -->
+        <div class="brain-skills" data-region="parietal" style="top: 15%; right: 0; max-width: 200px;">
+          <div class="bs-title">Specialized Skills</div>
+          <div class="bs-tags">
+            <span class="skill-tag">Full-stack development</span>
+            <span class="skill-tag">Algorithm design</span>
+            <span class="skill-tag">Data visualization</span>
+            <span class="skill-tag">Whiteboarding &amp; prototyping</span>
+            <span class="skill-tag">Robotics prototyping</span>
+            <span class="skill-tag">STEM curriculum development</span>
+            <span class="skill-tag">UI/UX</span>
+            <span class="skill-tag skill-new">LLM integration</span>
+            <span class="skill-tag skill-new">Real-time streaming</span>
+            <span class="skill-tag skill-new">Multi-model AI routing</span>
+            <span class="skill-tag skill-new">Process isolation</span>
+            <span class="skill-tag skill-new">Auth systems (JWT)</span>
+            <span class="skill-tag skill-new">Deployment pipelines</span>
+            <span class="skill-tag skill-new">Technical writing</span>
+          </div>
+        </div>
+
+        <!-- Temporal: Languages (left side) -->
+        <div class="brain-skills" data-region="temporal" style="top: 45%; left: 0; max-width: 180px;">
+          <div class="bs-title">Languages</div>
+          <div class="bs-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Ruby</span>
+            <span class="skill-tag">Ruby on Rails</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag skill-new">TypeScript</span>
+            <span class="skill-tag skill-new">SQL</span>
+          </div>
+        </div>
+
+        <!-- Occipital: Frameworks & Tools (right side) -->
+        <div class="brain-skills" data-region="occipital" style="top: 38%; right: 0; max-width: 200px;">
+          <div class="bs-title">Frameworks &amp; Tools</div>
+          <div class="bs-tags">
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">jGRASP</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">Bitbucket</span>
+            <span class="skill-tag">Git/GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Mac Terminal</span>
+            <span class="skill-tag">IntelliJ IDEA</span>
+            <span class="skill-tag skill-new">Flask</span>
+            <span class="skill-tag skill-new">gevent</span>
+            <span class="skill-tag skill-new">Next.js</span>
+            <span class="skill-tag skill-new">React</span>
+            <span class="skill-tag skill-new">Tailwind CSS</span>
+            <span class="skill-tag skill-new">Postgres / Supabase</span>
+            <span class="skill-tag skill-new">Framer Motion</span>
+          </div>
+        </div>
+
+        <!-- Cerebellum: Productivity (bottom left) -->
+        <div class="brain-skills" data-region="cerebellum" style="bottom: 0; left: 5%; max-width: 200px;">
+          <div class="bs-title">Productivity</div>
+          <div class="bs-tags">
+            <span class="skill-tag">Google Suite</span>
+            <span class="skill-tag">Excel (advanced)</span>
+            <span class="skill-tag">Presentation &amp; research tools</span>
+            <span class="skill-tag skill-new">Agile methodology</span>
+            <span class="skill-tag skill-new">Regression testing</span>
+            <span class="skill-tag skill-new">Architecture documentation</span>
+          </div>
+        </div>
+
+        <!-- Brain Stem: Foundation (bottom center) -->
+        <div class="brain-skills" data-region="stem" style="bottom: 0; right: 5%; max-width: 180px;">
+          <div class="bs-title">Foundation</div>
+          <div class="bs-tags">
+            <span class="skill-tag">Self-taught learner</span>
+            <span class="skill-tag">Cross-disciplinary</span>
+            <span class="skill-tag">Adaptable</span>
+            <span class="skill-tag">Resilient</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile fallback: stacked cards -->
+      <div class="skills-mobile">
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Prefrontal Cortex &mdash; Core Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Detail Oriented</span>
+            <span class="skill-tag">Analytical Aptitude</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Conceptual Thinking</span>
+            <span class="skill-tag">Technology</span>
+            <span class="skill-tag">Collaboration</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Parietal Lobe &mdash; Specialized Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Full-stack development</span>
+            <span class="skill-tag">Algorithm design</span>
+            <span class="skill-tag">Data visualization</span>
+            <span class="skill-tag">Whiteboarding &amp; prototyping</span>
+            <span class="skill-tag">Robotics prototyping</span>
+            <span class="skill-tag">STEM curriculum development</span>
+            <span class="skill-tag">UI/UX</span>
+            <span class="skill-tag skill-new">LLM integration</span>
+            <span class="skill-tag skill-new">Real-time streaming</span>
+            <span class="skill-tag skill-new">Multi-model AI routing</span>
+            <span class="skill-tag skill-new">Process isolation</span>
+            <span class="skill-tag skill-new">Auth systems (JWT)</span>
+            <span class="skill-tag skill-new">Deployment pipelines</span>
+            <span class="skill-tag skill-new">Technical writing</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Temporal Lobe &mdash; Languages</h3>
           <div class="skill-tags">
             <span class="skill-tag">Python</span>
             <span class="skill-tag">Java</span>
@@ -374,8 +570,8 @@
             <span class="skill-tag skill-new">SQL</span>
           </div>
         </div>
-        <div class="skill-category" data-reveal>
-          <h3 class="skill-cat-title">Frameworks &amp; Tools</h3>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Occipital Lobe &mdash; Frameworks &amp; Tools</h3>
           <div class="skill-tags">
             <span class="skill-tag">MATLAB</span>
             <span class="skill-tag">jGRASP</span>
@@ -395,27 +591,8 @@
             <span class="skill-tag skill-new">Framer Motion</span>
           </div>
         </div>
-        <div class="skill-category" data-reveal>
-          <h3 class="skill-cat-title">Specialized Skills</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Full-stack development</span>
-            <span class="skill-tag">Algorithm design</span>
-            <span class="skill-tag">Data visualization</span>
-            <span class="skill-tag">Whiteboarding &amp; prototyping</span>
-            <span class="skill-tag">Robotics prototyping</span>
-            <span class="skill-tag">STEM curriculum development</span>
-            <span class="skill-tag">UI/UX</span>
-            <span class="skill-tag skill-new">LLM integration</span>
-            <span class="skill-tag skill-new">Real-time streaming (SSE / WebSocket)</span>
-            <span class="skill-tag skill-new">Multi-model AI routing</span>
-            <span class="skill-tag skill-new">Process isolation &amp; concurrency</span>
-            <span class="skill-tag skill-new">Authentication systems (JWT)</span>
-            <span class="skill-tag skill-new">Deployment pipelines</span>
-            <span class="skill-tag skill-new">Technical writing &amp; documentation</span>
-          </div>
-        </div>
-        <div class="skill-category" data-reveal>
-          <h3 class="skill-cat-title">Productivity</h3>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Cerebellum &mdash; Productivity</h3>
           <div class="skill-tags">
             <span class="skill-tag">Google Suite</span>
             <span class="skill-tag">Excel (advanced)</span>
@@ -423,18 +600,6 @@
             <span class="skill-tag skill-new">Agile methodology</span>
             <span class="skill-tag skill-new">Regression testing</span>
             <span class="skill-tag skill-new">Architecture documentation</span>
-          </div>
-        </div>
-        <div class="skill-category" data-reveal>
-          <h3 class="skill-cat-title">Core Skills</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Detail Oriented</span>
-            <span class="skill-tag">Analytical Aptitude</span>
-            <span class="skill-tag">Problem Solving</span>
-            <span class="skill-tag">Communication</span>
-            <span class="skill-tag">Conceptual Thinking</span>
-            <span class="skill-tag">Technology</span>
-            <span class="skill-tag">Collaboration</span>
           </div>
         </div>
       </div>

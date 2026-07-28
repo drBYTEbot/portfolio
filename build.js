@@ -392,6 +392,61 @@ window.addEventListener('load', () => {
   draw();
 })();
 
+// --- BRAIN SKILLS INTERACTION ---
+(function brainSkills() {
+  const regions = document.querySelectorAll('.brain-region');
+  const clusters = document.querySelectorAll('.brain-skills');
+  if (!regions.length) return;
+
+  regions.forEach(region => {
+    const regionName = region.dataset.region;
+    region.addEventListener('mouseenter', () => {
+      regions.forEach(r => {
+        if (r.dataset.region === regionName) {
+          r.style.fill = 'rgba(212,175,55,0.25)';
+          r.style.stroke = 'rgba(212,175,55,0.7)';
+        }
+      });
+      clusters.forEach(c => {
+        if (c.dataset.region === regionName) {
+          c.style.opacity = '1';
+          c.querySelectorAll('.skill-tag').forEach((t, i) => {
+            setTimeout(() => t.style.transform = 'translateY(-2px)', i * 30);
+          });
+        }
+      });
+    });
+    region.addEventListener('mouseleave', () => {
+      regions.forEach(r => {
+        r.style.fill = '';
+        r.style.stroke = '';
+      });
+      clusters.forEach(c => {
+        c.querySelectorAll('.skill-tag').forEach(t => t.style.transform = '');
+      });
+    });
+  });
+
+  // Also highlight brain region when hovering a skill cluster
+  clusters.forEach(cluster => {
+    const regionName = cluster.dataset.region;
+    cluster.addEventListener('mouseenter', () => {
+      regions.forEach(r => {
+        if (r.dataset.region === regionName) {
+          r.style.fill = 'rgba(212,175,55,0.25)';
+          r.style.stroke = 'rgba(212,175,55,0.7)';
+        }
+      });
+    });
+    cluster.addEventListener('mouseleave', () => {
+      regions.forEach(r => {
+        r.style.fill = '';
+        r.style.stroke = '';
+      });
+    });
+  });
+})();
+
 // --- PROJECT FILTERS ---
 (function projectFilters() {
   const filters = document.querySelectorAll('.filter-btn');
