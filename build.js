@@ -346,9 +346,8 @@ window.addEventListener('load', () => {
   const PARTICLE_COUNT = 100;
 
   function resize() {
-    const rect = canvas.parentElement.getBoundingClientRect();
-    w = canvas.width = rect.width;
-    h = canvas.height = rect.height;
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
   }
   resize();
   window.addEventListener('resize', resize);
