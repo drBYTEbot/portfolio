@@ -770,8 +770,8 @@ section {
 }
 .brain-svg {
   position: absolute;
-  top: 42%;
-  left: 38%;
+  top: 32%;
+  left: 30%;
   transform: translate(-50%, -50%);
   width: 70%;
   max-width: 650px;
