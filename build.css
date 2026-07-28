@@ -842,33 +842,35 @@ section {
   font-weight: 500;
 }
 .pc-link {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text);
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: var(--text-light);
   text-decoration: none;
-  margin-top: 10px;
-  padding: 6px 14px;
   border: 1px solid var(--border);
-  border-radius: 6px;
-  transition: all 0.3s ease;
   background: var(--cream);
+  transition: all 0.3s ease;
+  font-size: 0;
 }
 .pc-link:hover {
   border-color: var(--gold);
   color: var(--gold-dim);
   background: white;
-  box-shadow: 0 4px 12px rgba(212,175,55,0.1);
+  box-shadow: 0 4px 12px rgba(212,175,55,0.12);
 }
 .pc-link svg {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   transition: transform 0.3s ease;
 }
 .pc-link:hover svg {
-  transform: translateX(3px);
+  transform: translateX(2px);
 }
 @media (max-width: 768px) {
   .project-grid { grid-template-columns: 1fr; }
