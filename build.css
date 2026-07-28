@@ -876,16 +876,16 @@ section {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  min-height: 850px;
+  min-height: 1400px;
   z-index: 2;
 }
 .brain-svg {
   position: absolute;
-  top: 50%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
-  max-width: 460px;
+  width: 75%;
+  max-width: 700px;
   opacity: 1;
   filter: drop-shadow(0 0 40px rgba(212,175,55,0.12));
   z-index: 2;
