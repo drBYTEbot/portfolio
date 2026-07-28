@@ -710,159 +710,23 @@ section {
 }
 
 /* ===== TIMELINE ===== */
-.timeline {
-  position: relative;
-  padding: 20px 0;
-}
-/* Organic nerve path via SVG background (same as volunteer timeline) */
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 60px;
-  transform: translateX(-50%);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='200' viewBox='0 0 60 200'%3E%3Cpath d='M30 0 Q10 25 30 50 Q50 75 15 100 Q0 125 30 150 Q55 175 30 200' stroke='%23D4AF37' stroke-width='1.5' fill='none' opacity='0.25'/%3E%3Ccircle cx='30' cy='0' r='2' fill='%23D4AF37' opacity='0.3'/%3E%3Ccircle cx='10' cy='25' r='1.5' fill='%23D4AF37' opacity='0.2'/%3E%3Ccircle cx='50' cy='75' r='1.5' fill='%23D4AF37' opacity='0.2'/%3E%3Ccircle cx='0' cy='125' r='1.5' fill='%23D4AF37' opacity='0.2'/%3E%3Ccircle cx='55' cy='175' r='1.5' fill='%23D4AF37' opacity='0.2'/%3E%3C/svg%3E");
-  background-repeat: repeat-y;
-  background-size: 60px auto;
-  z-index: 1;
-}
-.tl-item {
-  position: relative;
-  width: 50%;
-  margin-bottom: 28px;
-  padding: 0 40px;
-  z-index: 2;
-}
-/* Odd items on left */
-.tl-item:nth-child(odd) {
-  left: 0;
-  text-align: right;
-}
-/* Even items on right */
-.tl-item:nth-child(even) {
-  left: 50%;
-  text-align: left;
-}
-/* Nerve node - branching point (same as volunteer) */
-.tl-marker {
-  position: absolute;
-  top: 12px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--gold);
-  border: 2px solid var(--cream);
-  box-shadow: 0 0 0 2px var(--gold), 0 0 12px rgba(212,175,55,0.3);
-  z-index: 4;
-  transition: all 0.3s;
-}
-.tl-item:nth-child(odd) .tl-marker {
-  right: -6px;
-}
-.tl-item:nth-child(even) .tl-marker {
-  left: -6px;
-}
-/* Synaptic glow on hover */
-.tl-item:hover .tl-marker {
-  transform: scale(1.4);
-  box-shadow: 0 0 0 5px rgba(212,175,55,0.12), 0 0 16px rgba(212,175,55,0.5);
-}
-/* Branching connector */
-.tl-item:nth-child(odd) .tl-marker::after,
-.tl-item:nth-child(even) .tl-marker::after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  width: 14px;
-  height: 2px;
-  background: rgba(212,175,55,0.25);
-  border-radius: 1px;
-}
-.tl-item:nth-child(odd) .tl-marker::after {
-  right: -14px;
-}
-.tl-item:nth-child(even) .tl-marker::after {
-  left: -14px;
-}
-.tl-content {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 22px 26px;
-  transition: all 0.3s;
-  display: inline-block;
-  max-width: 100%;
-}
-.tl-item:nth-child(odd) .tl-content:hover {
-  transform: translateX(-6px);
-}
-.tl-item:nth-child(even) .tl-content:hover {
-  transform: translateX(6px);
-}
-.tl-content:hover {
-  border-color: var(--gold);
-  box-shadow: 0 8px 30px rgba(212,175,55,0.1);
-}
-.tl-header { margin-bottom: 8px; }
-.tl-date {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  color: var(--gold-dim);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 4px;
-}
-.tl-header h3 {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  color: var(--text);
-  line-height: 1.4;
-  font-weight: 400;
-  margin-bottom: 2px;
-}
-.tl-org {
-  font-size: 0.78rem;
-  color: var(--text-dim);
-}
+/* ===== EXPERIENCE (now uses vol-event nerve path, see volunteer styles) ===== */
 .tl-content p {
   font-size: 0.82rem;
   color: var(--text-dim);
   line-height: 1.7;
 }
 
-/* Mobile: collapse to single column with nerve path on left */
-@media (max-width: 768px) {
-  .timeline::before {
-    left: 20px;
-    width: 40px;
-    transform: none;
-  }
-  .tl-item,
-  .tl-item:nth-child(odd),
-  .tl-item:nth-child(even) {
-    width: 100%;
-    left: 0;
-    padding: 0 0 0 48px;
-    text-align: left;
-  }
-  .tl-item:nth-child(odd) .tl-marker,
-  .tl-item:nth-child(even) .tl-marker {
-    left: 14px;
-    right: auto;
-  }
-  .tl-item:nth-child(odd) .tl-marker::after,
-  .tl-item:nth-child(even) .tl-marker::after {
-    left: -14px;
-    right: auto;
-  }
-  .tl-item:nth-child(odd) .tl-content:hover,
-  .tl-item:nth-child(even) .tl-content:hover {
-    transform: translateX(4px);
-  }
+/* Experience timeline - tighter spacing for more items */
+.exp-timeline .vol-event {
+  padding: 10px 0;
+}
+.exp-timeline .vol-content h4 {
+  font-size: 0.82rem;
+}
+.exp-timeline .vol-content p {
+  font-size: 0.72rem;
+  line-height: 1.5;
 }
 
 /* ===== SKILLS ===== */
