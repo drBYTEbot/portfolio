@@ -226,6 +226,7 @@ window.addEventListener('load', () => {
 })();
 
 // --- NEURAL CANVAS (AI & Research background) ---
+(function neuralCanvas() {
   const canvas = document.getElementById('neuralCanvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
