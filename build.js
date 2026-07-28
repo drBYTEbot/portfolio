@@ -169,7 +169,63 @@ window.addEventListener('load', () => {
 })();
 
 // --- NEURAL NETWORK CANVAS (AI & Research section) ---
-(function neuralCanvas() {
+// --- LEADERSHIP CANVAS (neural network background) ---
+(function leaderCanvas() {
+  const canvas = document.getElementById('leaderCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w, h, nodes = [];
+
+  function resize() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    w = canvas.width = rect.width;
+    h = canvas.height = rect.height;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  for (let i = 0; i < 35; i++) {
+    nodes.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25,
+      layer: Math.floor(Math.random() * 4),
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    nodes.forEach((n, i) => {
+      n.x += n.vx;
+      n.y += n.vy;
+      if (n.x < 0 || n.x > w) n.vx *= -1;
+      if (n.y < 0 || n.y > h) n.vy *= -1;
+      for (let j = i + 1; j < nodes.length; j++) {
+        if (Math.abs(nodes[j].layer - n.layer) !== 1) continue;
+        const dx = n.x - nodes[j].x;
+        const dy = n.y - nodes[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 180) {
+          ctx.beginPath();
+          ctx.moveTo(n.x, n.y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = `rgba(212, 175, 55, ${0.05 * (1 - dist / 180)})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(212, 175, 55, 0.25)';
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// --- NEURAL CANVAS (AI & Research background) ---
   const canvas = document.getElementById('neuralCanvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
