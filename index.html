@@ -365,44 +365,47 @@
       <div class="brain-wrapper" data-reveal>
         <!-- SVG Brain -->
         <svg class="brain-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Full brain outline (visible shape) -->
+          <path d="M250 60 Q180 55 140 90 Q100 120 105 170 Q100 210 120 240 Q110 270 130 290 Q140 320 175 320 Q190 340 220 335 Q235 330 235 310 Q230 280 240 260 Q250 255 260 260 Q270 280 265 310 Q270 330 285 335 Q315 340 330 320 Q365 320 375 290 Q395 270 385 240 Q405 210 400 170 Q405 120 365 90 Q325 55 250 60 Z" 
+                fill="none" stroke="rgba(212,175,55,0.15)" stroke-width="1"/>
           <!-- Brain stem -->
           <path d="M235 310 Q230 340 240 370 Q250 385 260 370 Q270 340 265 310 Z" 
-                class="brain-region" data-region="stem" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+                class="brain-region" data-region="stem" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
           <!-- Cerebellum -->
           <ellipse cx="205" cy="300" rx="35" ry="25" 
-                   class="brain-region" data-region="cerebellum" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+                   class="brain-region" data-region="cerebellum" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
           <!-- Occipital lobe (back) -->
           <path d="M150 180 Q120 170 115 200 Q115 230 140 250 Q160 255 175 245 Q180 220 175 195 Q168 180 150 180 Z" 
-                class="brain-region" data-region="occipital" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+                class="brain-region" data-region="occipital" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
           <!-- Temporal lobe (lower left) -->
           <path d="M175 240 Q160 260 170 285 Q190 300 215 295 Q230 280 225 250 Q210 240 175 240 Z" 
-                class="brain-region" data-region="temporal-l" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+                class="brain-region" data-region="temporal-l" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
           <!-- Temporal lobe (lower right) -->
           <path d="M325 240 Q340 260 330 285 Q310 300 285 295 Q270 280 275 250 Q290 240 325 240 Z" 
-                class="brain-region" data-region="temporal-r" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+                class="brain-region" data-region="temporal-r" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
           <!-- Parietal lobe (top) -->
           <path d="M200 100 Q250 85 300 100 Q310 140 295 170 Q250 180 205 170 Q190 140 200 100 Z" 
-                class="brain-region" data-region="parietal" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+                class="brain-region" data-region="parietal" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
           <!-- Prefrontal cortex (front left) -->
           <path d="M175 120 Q150 100 155 140 Q165 170 185 180 Q200 175 200 140 Q195 120 175 120 Z" 
-                class="brain-region" data-region="prefrontal-l" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+                class="brain-region" data-region="prefrontal-l" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
           <!-- Prefrontal cortex (front right) -->
           <path d="M325 120 Q350 100 345 140 Q335 170 315 180 Q300 175 300 140 Q305 120 325 120 Z" 
-                class="brain-region" data-region="prefrontal-r" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+                class="brain-region" data-region="prefrontal-r" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
           <!-- Central fissure -->
           <path d="M250 100 Q245 150 250 200 Q255 250 250 300" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="1" stroke-dasharray="3,4"/>
           <!-- Hippocampus (deep center - LLMs) -->
           <ellipse cx="250" cy="250" rx="28" ry="20" 
-                   class="brain-region" data-region="hippocampus" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
+                   class="brain-region" data-region="hippocampus" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
           <!-- Neuron dots scattered -->
-          <circle cx="220" cy="130" r="1.5" fill="rgba(212,175,55,0.4)"/>
-          <circle cx="280" cy="140" r="1.5" fill="rgba(212,175,55,0.4)"/>
-          <circle cx="180" cy="200" r="1.5" fill="rgba(212,175,55,0.3)"/>
-          <circle cx="320" cy="210" r="1.5" fill="rgba(212,175,55,0.3)"/>
-          <circle cx="250" cy="220" r="2" fill="rgba(212,175,55,0.5)"/>
-          <circle cx="200" cy="270" r="1.5" fill="rgba(212,175,55,0.3)"/>
-          <circle cx="300" cy="270" r="1.5" fill="rgba(212,175,55,0.3)"/>
-          <circle cx="250" cy="340" r="1.5" fill="rgba(212,175,55,0.3)"/>
+          <circle cx="220" cy="130" r="2" fill="rgba(212,175,55,0.5)"/>
+          <circle cx="280" cy="140" r="2" fill="rgba(212,175,55,0.5)"/>
+          <circle cx="180" cy="200" r="2" fill="rgba(212,175,55,0.4)"/>
+          <circle cx="320" cy="210" r="2" fill="rgba(212,175,55,0.4)"/>
+          <circle cx="250" cy="220" r="3" fill="rgba(212,175,55,0.6)"/>
+          <circle cx="200" cy="270" r="2" fill="rgba(212,175,55,0.4)"/>
+          <circle cx="300" cy="270" r="2" fill="rgba(212,175,55,0.4)"/>
+          <circle cx="250" cy="340" r="2" fill="rgba(212,175,55,0.4)"/>
         </svg>
 
         <!-- Region labels (positioned over brain) -->

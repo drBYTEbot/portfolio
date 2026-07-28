@@ -884,19 +884,20 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 45%;
-  max-width: 420px;
-  opacity: 0.9;
-  filter: drop-shadow(0 0 30px rgba(212,175,55,0.08));
+  width: 60%;
+  max-width: 500px;
+  opacity: 1;
+  filter: drop-shadow(0 0 40px rgba(212,175,55,0.12));
+  z-index: 2;
 }
 .brain-region {
   transition: all 0.4s ease;
   cursor: pointer;
 }
 .brain-region:hover {
-  fill: rgba(212,175,55,0.2) !important;
-  stroke: rgba(212,175,55,0.6) !important;
-  filter: drop-shadow(0 0 8px rgba(212,175,55,0.3));
+  fill: rgba(212,175,55,0.25) !important;
+  stroke: rgba(212,175,55,0.7) !important;
+  filter: drop-shadow(0 0 12px rgba(212,175,55,0.4));
 }
 
 /* Region labels on brain */
@@ -907,8 +908,8 @@ section {
 }
 .bl-name {
   font-family: var(--font-mono);
-  font-size: 0.5rem;
-  color: rgba(212,175,55,0.5);
+  font-size: 0.58rem;
+  color: rgba(212,175,55,0.7);
   letter-spacing: 1px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -999,11 +1000,11 @@ section {
 }
 
 /* Show brain layout on desktop, stacked on mobile */
-@media (min-width: 900px) {
+@media (min-width: 769px) {
   .skills-mobile { display: none; }
   .brain-wrapper { display: block; }
 }
-@media (max-width: 899px) {
+@media (max-width: 768px) {
   .skills-mobile { display: block; }
   .brain-wrapper { display: none; }
   .skills-intro { display: none; }
