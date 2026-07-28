@@ -348,29 +348,12 @@ window.addEventListener('load', () => {
       btn.classList.add('active');
       const filter = btn.dataset.filter;
       cards.forEach(card => {
-        if (filter === 'all' || card.dataset.category.includes(filter)) {
+        if (card.dataset.category.includes(filter)) {
           card.classList.remove('hidden');
         } else {
           card.classList.add('hidden');
         }
       });
-    });
-  });
-})();
-
-// --- SHOW MORE PROJECTS ---
-(function showMoreProjects() {
-  const btn = document.getElementById('showMoreBtn');
-  if (!btn) return;
-  const hiddenCards = document.querySelectorAll('.project-card.pc-hidden');
-  btn.addEventListener('click', () => {
-    const isExpanded = btn.classList.toggle('expanded');
-    hiddenCards.forEach((card, i) => {
-      if (isExpanded) {
-        setTimeout(() => card.classList.add('pc-show'), i * 80);
-      } else {
-        card.classList.remove('pc-show');
-      }
     });
   });
 })();
