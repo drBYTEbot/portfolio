@@ -398,17 +398,25 @@ window.addEventListener('load', () => {
   const clusters = document.querySelectorAll('.brain-skills');
   if (!regions.length) return;
 
+  // Match region names: 'prefrontal-l' matches cluster 'prefrontal'
+  function regionsMatch(svgRegion, clusterRegion) {
+    return svgRegion === clusterRegion || svgRegion.startsWith(clusterRegion);
+  }
+
   regions.forEach(region => {
     const regionName = region.dataset.region;
     region.addEventListener('mouseenter', () => {
+      // Highlight all matching SVG regions (e.g. prefrontal-l AND prefrontal-r)
       regions.forEach(r => {
-        if (r.dataset.region === regionName) {
+        if (regionsMatch(r.dataset.region, regionName.replace(/-l$/, '').replace(/-r$/, ''))) {
           r.style.fill = 'rgba(212,175,55,0.25)';
           r.style.stroke = 'rgba(212,175,55,0.7)';
         }
       });
+      // Highlight matching skill cluster
+      const baseName = regionName.replace(/-l$/, '').replace(/-r$/, '');
       clusters.forEach(c => {
-        if (c.dataset.region === regionName) {
+        if (c.dataset.region === baseName) {
           c.style.opacity = '1';
           c.querySelectorAll('.skill-tag').forEach((t, i) => {
             setTimeout(() => t.style.transform = 'translateY(-2px)', i * 30);
@@ -427,12 +435,12 @@ window.addEventListener('load', () => {
     });
   });
 
-  // Also highlight brain region when hovering a skill cluster
+  // Also highlight brain region(s) when hovering a skill cluster
   clusters.forEach(cluster => {
     const regionName = cluster.dataset.region;
     cluster.addEventListener('mouseenter', () => {
       regions.forEach(r => {
-        if (r.dataset.region === regionName) {
+        if (regionsMatch(r.dataset.region, regionName)) {
           r.style.fill = 'rgba(212,175,55,0.25)';
           r.style.stroke = 'rgba(212,175,55,0.7)';
         }
