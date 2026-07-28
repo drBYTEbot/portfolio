@@ -391,6 +391,9 @@
                 class="brain-region" data-region="prefrontal-r" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
           <!-- Central fissure -->
           <path d="M250 100 Q245 150 250 200 Q255 250 250 300" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="1" stroke-dasharray="3,4"/>
+          <!-- Hippocampus (deep center - LLMs) -->
+          <ellipse cx="250" cy="250" rx="28" ry="20" 
+                   class="brain-region" data-region="hippocampus" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.3)" stroke-width="1.5"/>
           <!-- Neuron dots scattered -->
           <circle cx="220" cy="130" r="1.5" fill="rgba(212,175,55,0.4)"/>
           <circle cx="280" cy="140" r="1.5" fill="rgba(212,175,55,0.4)"/>
@@ -423,6 +426,9 @@
         </div>
         <div class="brain-label" data-region="stem" style="top: 80%; left: 50%; transform: translateX(-50%);">
           <span class="bl-name">Brain Stem</span>
+        </div>
+        <div class="brain-label" data-region="hippocampus" style="top: 62%; left: 50%; transform: translateX(-50%);">
+          <span class="bl-name">Hippocampus</span>
         </div>
 
         <!-- Skill clusters positioned around brain -->
@@ -489,6 +495,7 @@
             <span class="skill-tag">VS Code</span>
             <span class="skill-tag">Mac Terminal</span>
             <span class="skill-tag">IntelliJ IDEA</span>
+            <span class="skill-tag skill-new">OpenCode</span>
             <span class="skill-tag skill-new">Flask</span>
             <span class="skill-tag skill-new">gevent</span>
             <span class="skill-tag skill-new">Next.js</span>
@@ -520,6 +527,21 @@
             <span class="skill-tag">Cross-disciplinary</span>
             <span class="skill-tag">Adaptable</span>
             <span class="skill-tag">Resilient</span>
+          </div>
+        </div>
+
+        <!-- Hippocampus: LLMs (center, below brain) -->
+        <div class="brain-skills" data-region="hippocampus" style="bottom: 5%; left: 50%; transform: translateX(-50%); max-width: 240px; text-align: center;">
+          <div class="bs-title" style="text-align: center;">LLMs</div>
+          <div class="bs-tags" style="justify-content: center;">
+            <span class="skill-tag skill-new">deepseek-v4-flash</span>
+            <span class="skill-tag skill-new">deepseek-v4-pro</span>
+            <span class="skill-tag skill-new">glm-5.2</span>
+            <span class="skill-tag skill-new">kimi-k3</span>
+            <span class="skill-tag skill-new">kimi-k2.7-code</span>
+            <span class="skill-tag skill-new">qwen3.6-27b</span>
+            <span class="skill-tag skill-new">gemma-4-31b-it</span>
+            <span class="skill-tag skill-new">gpt-oss-120b</span>
           </div>
         </div>
       </div>
@@ -582,6 +604,7 @@
             <span class="skill-tag">VS Code</span>
             <span class="skill-tag">Mac Terminal</span>
             <span class="skill-tag">IntelliJ IDEA</span>
+            <span class="skill-tag skill-new">OpenCode</span>
             <span class="skill-tag skill-new">Flask</span>
             <span class="skill-tag skill-new">gevent</span>
             <span class="skill-tag skill-new">Next.js</span>
@@ -912,9 +935,22 @@
               <div class="vol-content">
                 <h4>BFSA Juneteenth Event</h4>
                 <p>STEM elementary school demo</p>
-              </div>
-            </div>
           </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Hippocampus &mdash; LLMs</h3>
+          <div class="skill-tags">
+            <span class="skill-tag skill-new">deepseek-v4-flash</span>
+            <span class="skill-tag skill-new">deepseek-v4-pro</span>
+            <span class="skill-tag skill-new">glm-5.2</span>
+            <span class="skill-tag skill-new">kimi-k3</span>
+            <span class="skill-tag skill-new">kimi-k2.7-code</span>
+            <span class="skill-tag skill-new">qwen3.6-27b</span>
+            <span class="skill-tag skill-new">gemma-4-31b-it</span>
+            <span class="skill-tag skill-new">gpt-oss-120b</span>
+          </div>
+        </div>
+      </div>
         </div>
 
         <!-- Ongoing Community Work -->
