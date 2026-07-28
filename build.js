@@ -524,46 +524,148 @@ window.addEventListener('load', () => {
   });
 })();
 
-// --- SOUND EFFECTS ---
+// --- SOUND: BACKGROUND MUSIC + EFFECTS ---
 (function sounds() {
   const toggle = document.getElementById('soundToggle');
   let muted = false;
-  if (toggle) {
-    toggle.classList.remove('muted');
-    toggle.addEventListener('click', () => {
-      muted = !muted;
-      toggle.classList.toggle('muted', muted);
-    });
+  let audioCtx = null;
+  let musicPlaying = false;
+  let musicNodes = [];
+
+  // Ambient background music - gold-luxury themed arpeggio
+  const NOTES = [523.25, 659.25, 783.99, 659.25, 523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, E5, C5, E5, G5, C6
+  let noteIndex = 0;
+
+  function ensureAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    return audioCtx;
   }
 
-  function play(type) {
+  function startMusic() {
+    const ctx = ensureAudio();
+    if (ctx.state === 'suspended') ctx.resume();
+    musicPlaying = true;
+
+    // Master gain for music
+    const masterGain = ctx.createGain();
+    masterGain.gain.value = 0;
+    masterGain.gain.linearRampToValueAtTime(0.08, ctx.currentTime + 2);
+    masterGain.connect(ctx.destination);
+    musicNodes.push(masterGain);
+
+    // Play notes in a loop
+    function playNote() {
+      if (!musicPlaying) return;
+      const now = ctx.currentTime;
+      const freq = NOTES[noteIndex % NOTES.length];
+      noteIndex++;
+
+      // Main note (sine - warm)
+      const osc1 = ctx.createOscillator();
+      const gain1 = ctx.createGain();
+      osc1.type = 'sine';
+      osc1.frequency.value = freq;
+      gain1.gain.setValueAtTime(0, now);
+      gain1.gain.linearRampToValueAtTime(0.5, now + 0.05);
+      gain1.gain.exponentialRampToValueAtTime(0.001, now + 1.5);
+      osc1.connect(gain1);
+      gain1.connect(masterGain);
+      osc1.start(now);
+      osc1.stop(now + 1.5);
+
+      // Harmony (triangle - soft)
+      const osc2 = ctx.createOscillator();
+      const gain2 = ctx.createGain();
+      osc2.type = 'triangle';
+      osc2.frequency.value = freq / 2;
+      gain2.gain.setValueAtTime(0, now);
+      gain2.gain.linearRampToValueAtTime(0.15, now + 0.05);
+      gain2.gain.exponentialRampToValueAtTime(0.001, now + 1.5);
+      osc2.connect(gain2);
+      gain2.connect(masterGain);
+      osc2.start(now);
+      osc2.stop(now + 1.5);
+
+      // Schedule next note
+      setTimeout(() => playNote(), 400);
+    }
+    playNote();
+  }
+
+  function stopMusic() {
+    musicPlaying = false;
+    if (audioCtx) {
+      const now = audioCtx.currentTime;
+      musicNodes.forEach(node => {
+        try {
+          if (node.gain) {
+            node.gain.cancelScheduledValues(now);
+            node.gain.setValueAtTime(node.gain.value, now);
+            node.gain.linearRampToValueAtTime(0, now + 0.5);
+          }
+        } catch(e) {}
+      });
+      setTimeout(() => {
+        musicNodes.forEach(node => { try { node.disconnect(); } catch(e) {} });
+        musicNodes = [];
+      }, 600);
+    }
+  }
+
+  // Click sound for UI
+  function playClick() {
     if (muted) return;
     try {
-      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const ctx = ensureAudio();
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
       osc.connect(gain);
       gain.connect(ctx.destination);
       gain.gain.value = 0.03;
-      if (type === 'hover') {
-        osc.frequency.value = 880;
-        osc.type = 'sine';
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.06);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.06);
-      } else if (type === 'click') {
-        osc.frequency.value = 660;
-        osc.type = 'sine';
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.12);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.12);
-      }
+      osc.frequency.value = 660;
+      osc.type = 'sine';
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.12);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.12);
     } catch(e) {}
   }
 
+  // Hover sound for UI
+  function playHover() {
+    if (muted) return;
+    try {
+      const ctx = ensureAudio();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      gain.gain.value = 0.02;
+      osc.frequency.value = 880;
+      osc.type = 'sine';
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.06);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.06);
+    } catch(e) {}
+  }
+
+  if (toggle) {
+    toggle.classList.add('muted');
+    toggle.addEventListener('click', () => {
+      muted = !muted;
+      toggle.classList.toggle('muted', muted);
+      if (muted) {
+        stopMusic();
+      } else {
+        startMusic();
+      }
+    });
+  }
+
   document.querySelectorAll('a, button, .project-card, .research-card, .contact-link, .filter-btn, .game-start-btn').forEach(el => {
-    el.addEventListener('mouseenter', () => play('hover'));
-    el.addEventListener('click', () => play('click'));
+    el.addEventListener('mouseenter', () => playHover());
+    el.addEventListener('click', () => playClick());
   });
 })();
 
@@ -584,14 +686,14 @@ window.addEventListener('load', () => {
   let gravity = 0.5;
   let groundY = 170;
 
-  const dino = { x: 60, y: groundY, vy: 0, w: 20, h: 28, grounded: true };
+  const dino = { x: 60, y: groundY - 28, vy: 0, w: 20, h: 28, grounded: true };
   let obstacles = [];
   let groundOffset = 0;
 
   highscoreEl.textContent = highscore;
 
   function reset() {
-    dino.y = groundY;
+    dino.y = groundY - dino.h;
     dino.vy = 0;
     dino.grounded = true;
     obstacles = [];
@@ -630,8 +732,8 @@ window.addEventListener('load', () => {
     // gravity
     dino.vy += gravity;
     dino.y += dino.vy;
-    if (dino.y >= groundY) {
-      dino.y = groundY;
+    if (dino.y >= groundY - dino.h) {
+      dino.y = groundY - dino.h;
       dino.vy = 0;
       dino.grounded = true;
     }
@@ -642,11 +744,12 @@ window.addEventListener('load', () => {
     // spawn obstacles
     if (frame % 80 === 0 && Math.random() > 0.4) {
       const type = Math.random() > 0.5 ? 'cactus' : 'cactus_small';
+      const h = type === 'cactus' ? 32 : 20;
       obstacles.push({
         x: canvas.width,
-        y: type === 'cactus' ? groundY - 32 : groundY - 20,
+        y: groundY - h,
         w: type === 'cactus' ? 16 : 10,
-        h: type === 'cactus' ? 32 : 20,
+        h: h,
       });
     }
 
