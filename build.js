@@ -169,12 +169,13 @@ window.addEventListener('load', () => {
 })();
 
 // --- NEURAL NETWORK CANVAS (AI & Research section) ---
-// --- LEADERSHIP CANVAS (neural network background) ---
+// --- LEADERSHIP CANVAS (hero-style particle network) ---
 (function leaderCanvas() {
   const canvas = document.getElementById('leaderCanvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  let w, h, nodes = [];
+  let w, h, particles = [];
+  const PARTICLE_COUNT = 80;
 
   function resize() {
     const rect = canvas.parentElement.getBoundingClientRect();
@@ -184,41 +185,40 @@ window.addEventListener('load', () => {
   resize();
   window.addEventListener('resize', resize);
 
-  for (let i = 0; i < 35; i++) {
-    nodes.push({
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push({
       x: Math.random() * w,
       y: Math.random() * h,
-      vx: (Math.random() - 0.5) * 0.25,
-      vy: (Math.random() - 0.5) * 0.25,
-      layer: Math.floor(Math.random() * 4),
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      r: Math.random() * 1.5 + 0.5,
     });
   }
 
   function draw() {
     ctx.clearRect(0, 0, w, h);
-    nodes.forEach((n, i) => {
-      n.x += n.vx;
-      n.y += n.vy;
-      if (n.x < 0 || n.x > w) n.vx *= -1;
-      if (n.y < 0 || n.y > h) n.vy *= -1;
-      for (let j = i + 1; j < nodes.length; j++) {
-        if (Math.abs(nodes[j].layer - n.layer) !== 1) continue;
-        const dx = n.x - nodes[j].x;
-        const dy = n.y - nodes[j].y;
+    particles.forEach((p, i) => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > w) p.vx *= -1;
+      if (p.y < 0 || p.y > h) p.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(212, 175, 55, 0.4)';
+      ctx.fill();
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = p.x - particles[j].x;
+        const dy = p.y - particles[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 180) {
+        if (dist < 150) {
           ctx.beginPath();
-          ctx.moveTo(n.x, n.y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.strokeStyle = `rgba(212, 175, 55, ${0.05 * (1 - dist / 180)})`;
-          ctx.lineWidth = 1;
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(212, 175, 55, ${0.08 * (1 - dist / 150)})`;
+          ctx.lineWidth = 0.5;
           ctx.stroke();
         }
       }
-      ctx.beginPath();
-      ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(212, 175, 55, 0.25)';
-      ctx.fill();
     });
     requestAnimationFrame(draw);
   }
