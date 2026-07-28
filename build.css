@@ -843,13 +843,13 @@ section {
 }
 .pc-link {
   position: absolute;
-  bottom: 14px;
-  right: 14px;
+  bottom: 12px;
+  right: 12px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   color: var(--text-light);
   text-decoration: none;
@@ -857,6 +857,7 @@ section {
   background: var(--cream);
   transition: all 0.3s ease;
   font-size: 0;
+  line-height: 0;
 }
 .pc-link:hover {
   border-color: var(--gold);
@@ -865,8 +866,8 @@ section {
   box-shadow: 0 4px 12px rgba(212,175,55,0.12);
 }
 .pc-link svg {
-  width: 12px;
-  height: 12px;
+  width: 9px;
+  height: 9px;
   transition: transform 0.3s ease;
 }
 .pc-link:hover svg {
