@@ -836,6 +836,67 @@ section {
   transform: translateY(-4px);
 }
 .project-card.hidden { display: none; }
+.project-card.pc-hidden {
+  display: none;
+  animation: pcFadeIn 0.5s ease forwards;
+}
+.project-card.pc-hidden.pc-show {
+  display: block;
+}
+@keyframes pcFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Show More button */
+.project-more {
+  text-align: center;
+  margin-top: 32px;
+}
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--cream);
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.show-more-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: white;
+  box-shadow: 0 4px 16px rgba(212,175,55,0.1);
+  transform: translateY(-2px);
+}
+.show-more-btn svg {
+  transition: transform 0.3s ease;
+}
+.show-more-btn.expanded svg {
+  transform: rotate(180deg);
+}
+.show-more-btn.expanded .show-more-text::before {
+  content: "Show Less";
+}
+.show-more-btn.expanded .show-more-text {
+  display: none;
+}
+.show-more-btn.expanded::after {
+  content: "Show Less";
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 .pc-num {
   font-family: var(--font-mono);
   font-size: 0.65rem;

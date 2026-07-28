@@ -358,6 +358,23 @@ window.addEventListener('load', () => {
   });
 })();
 
+// --- SHOW MORE PROJECTS ---
+(function showMoreProjects() {
+  const btn = document.getElementById('showMoreBtn');
+  if (!btn) return;
+  const hiddenCards = document.querySelectorAll('.project-card.pc-hidden');
+  btn.addEventListener('click', () => {
+    const isExpanded = btn.classList.toggle('expanded');
+    hiddenCards.forEach((card, i) => {
+      if (isExpanded) {
+        setTimeout(() => card.classList.add('pc-show'), i * 80);
+      } else {
+        card.classList.remove('pc-show');
+      }
+    });
+  });
+})();
+
 // --- COPY TO CLIPBOARD ---
 (function copyLinks() {
   document.querySelectorAll('.cl-copy').forEach(el => {
