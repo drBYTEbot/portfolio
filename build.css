@@ -284,6 +284,41 @@ section {
   text-align: center;
 }
 
+/* Scroll to explore hint */
+.scroll-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--gold-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  opacity: 0.6;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+.scroll-hint svg {
+  animation: scrollChevron 2s ease-in-out infinite;
+}
+@keyframes scrollBounce {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+@keyframes scrollChevron {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+/* Dark section variants */
+#skills .scroll-hint,
+#leadership .scroll-hint {
+  color: rgba(212,175,55,0.5);
+}
+#community .scroll-hint {
+  color: var(--gold-dim);
+}
+
 /* ===== REVEAL ANIMATION ===== */
 [data-reveal] {
   opacity: 0;
