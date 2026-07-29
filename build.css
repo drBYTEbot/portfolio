@@ -262,6 +262,7 @@ section {
 /* ===== SECTION HEADER ===== */
 .section-header {
   margin-bottom: 48px;
+  text-align: center;
 }
 .section-number {
   font-family: var(--font-mono);
@@ -278,6 +279,9 @@ section {
   font-weight: 400;
   color: var(--text);
   line-height: 1.2;
+}
+.section-header h3 {
+  text-align: center;
 }
 
 /* ===== REVEAL ANIMATION ===== */
