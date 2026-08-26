@@ -1,0 +1,27 @@
+/* ===== responsive.css ===== */
+@media (max-width: 768px) {
+  .hud-progress { display: none; }
+  .hud { padding: 10px 12px; }
+  .hud-btn { font-size: 0.72rem; padding: 7px 11px; }
+
+  #brainSvg { width: 96vw; max-height: 64vh; }
+
+  .panel-card { padding: 22px 18px 22px 72px; }
+  .panel-card h2 { font-size: 1.6rem; }
+
+  .course-grid { grid-template-columns: 1fr; }
+  .proj-grid, .lead-grid, .res-grid { grid-template-columns: 1fr; }
+
+  .landing-title { font-size: clamp(2.6rem, 16vw, 4.5rem); }
+  .brain-hint { font-size: 0.64rem; padding: 0 10px; }
+}
+
+@media (max-width: 420px) {
+  .hud-btn#pageBtn { display: none; }
+  .landing-tag { font-size: 0.85rem; }
+}
+
+/* Larger screens: give the brain room */
+@media (min-width: 1100px) {
+  .brain-stage { padding: 30px; }
+}

@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Saria Malik | AI Engineer & Creative Technologist</title>
+  <meta name="description" content="Saria Malik — Cognitive Science & Writing Seminars at Johns Hopkins University. AI, robotics, research, and creative technology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="build.css?v=5">
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <span class="loader-text">Initializing</span>
+    </div>
+  </div>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-sigil">&#9826;</span>
+        <span class="nav-logo-text">Saria Malik</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#coursework">Coursework</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#coursework" class="mobile-link">Coursework</a>
+      <a href="#leadership" class="mobile-link">Leadership</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge" data-reveal>AI &bull; Robotics &bull; Research</div>
+      <h1 data-reveal>
+        <span class="hero-greeting">Hello, I'm</span>
+        <span class="hero-name">Saria Malik</span>
+      </h1>
+      <div class="hero-rotating" data-reveal>
+        <span class="rotating-label">I build as a</span>
+        <span class="rotating-text" id="rotatingText">AI Engineer</span>
+      </div>
+      <p class="hero-tagline" data-reveal>Cognitive Science &amp; Writing Seminars at <strong>Johns Hopkins University</strong> &mdash; Baltimore, MD</p>
+      <div class="hero-cta" data-reveal>
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#about" class="btn btn-outline">Explore My Journey</a>
+        <a href="#contact" class="btn btn-ghost">Connect With Me</a>
+      </div>
+      <div class="hero-scroll" data-reveal>
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+    <div class="hero-marquee">
+      <span>Python &middot; Java &middot; Algorithms &middot; Robotics &middot; TypeScript &middot; JavaScript &middot; AI &middot; Research &middot; </span>
+      <span>Python &middot; Java &middot; Algorithms &middot; Robotics &middot; TypeScript &middot; JavaScript &middot; AI &middot; Research &middot; </span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">01</span>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <p>
+            I'm <strong>Saria Malik</strong> &mdash; a cognitive science and writing seminars double major at the
+            <strong>Johns Hopkins Whiting School of Engineering</strong>, driven by the belief that
+            the most powerful technology lives at the intersection of logic and creativity.
+          </p>
+          <p>
+            My work spans cognitive science, writing, programming, and robotics. I'm passionate about
+            research, team leadership, and engineering that's infused with curiosity and craft.
+            I'm also a <strong>U.S. Congressional App Challenge winner</strong> (Maryland's 2nd District, 2023&ndash;2024),
+            a <strong>Clark Scholars Peer Leader</strong> at JHU,
+            a <strong>Cummings Scholars Student Leadership Board Member</strong> at JHU, and a proud <strong>WISE program alum</strong>.
+          </p>
+          <p>
+            Whether I'm developing software at <strong>nVeris Tech</strong>, <strong>ai&amp;</strong>, leading workshops for
+            incoming scholars, or exploring performing arts with <strong>Anna Deavere Smith</strong>,
+            I bring the same principle to everything: <em>the engineer builds what the artist imagines</em>.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-count="9">0</span>
+              <span class="stat-label">Repos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="2028">0</span>
+              <span class="stat-label">Grad Year</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="1">0</span>
+              <span class="stat-label">University</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="5">0</span>
+              <span class="stat-label">Awards</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card" data-reveal>
+          <div class="ac-header">
+            <div class="ac-line"></div>
+            <div class="ac-body">
+              <div class="ac-row"><span class="ac-key">Name</span><span class="ac-val">Saria Malik</span></div>
+              <div class="ac-row"><span class="ac-key">Major</span><span class="ac-val">CogSci &amp; Writing Seminars</span></div>
+              <div class="ac-row"><span class="ac-key">School</span><span class="ac-val">Johns Hopkins Univ.</span></div>
+              <div class="ac-row"><span class="ac-key">Location</span><span class="ac-val">Baltimore, MD</span></div>
+              <div class="ac-row"><span class="ac-key">Focus</span><span class="ac-val">CogSci, AI, Writing</span></div>
+              <div class="ac-row"><span class="ac-key">Grad</span><span class="ac-val">2028</span></div>
+            </div>
+          </div>
+          <div class="about-card-buttons">
+            <button class="tts-btn" id="ttsBtn" aria-label="Listen to about section">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              <span>Listen</span>
+            </button>
+            <a href="https://www.sutori.com/en/story/self-study--8HqVuRdrdvJMp161T3FaPfx6" target="_blank" rel="noopener" class="about-link-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <span>Self-Study</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ARTIST + ENGINEER FUSION ===== -->
+  <section id="fusion">
+    <canvas id="fusionCanvas"></canvas>
+    <div class="container">
+      <div class="fusion-grid">
+        <div class="fusion-side fusion-artist" data-reveal>
+          <span class="fusion-label">Artist</span>
+          <ul>
+            <li>Creativity</li>
+            <li>Design</li>
+            <li>Visual Storytelling</li>
+            <li>Expression</li>
+          </ul>
+        </div>
+        <div class="fusion-center" data-reveal>
+          <div class="fusion-symbol">&#9826;</div>
+          <p>The engineer builds what<br>the artist imagines.</p>
+          <p class="fusion-sub">The artist refines what<br>the engineer builds.</p>
+        </div>
+        <div class="fusion-side fusion-engineer" data-reveal>
+          <span class="fusion-label">Engineer</span>
+          <ul>
+            <li>Logic</li>
+            <li>AI & Robotics</li>
+            <li>Problem Solving</li>
+            <li>Systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE TIMELINE ===== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">02</span>
+        <h2>Experience</h2>
+      </div>
+      <p class="scroll-hint" data-reveal>Scroll to explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></p>
+      <div class="vol-events exp-timeline">
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">JUN 2026</span>
+            <span class="vol-year">AUG 2026</span>
+          </div>
+          <div class="vol-content">
+            <h4>AI Engineering Intern &mdash; AI&amp;</h4>
+            <p>Built and deployed production AI systems including multi-model LLM routing, real-time streaming architectures, and per-project process isolation. Led development of authentication, database persistence, and analytics systems on a 3-person engineering team over 8 weeks.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">JUL 2025</span>
+            <span class="vol-year">AUG 2025</span>
+          </div>
+          <div class="vol-content">
+            <h4>Software Development Intern &mdash; nVeris Tech, Baltimore, MD</h4>
+            <p>Contributed to Pulse, an AI-enhanced platform for customer experience managers. Developed auto-generated surveys, AI-summarized responses, and data visualizations. Built front-end and back-end features using Ruby on Rails, JavaScript, and HTML. Leveraged Docker, Jira, and Bitbucket in an agile environment.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">FEB 2024</span>
+            <span class="vol-year">JUL 2025</span>
+          </div>
+          <div class="vol-content">
+            <h4>Shift Lead &mdash; Walgreens, Baltimore, MD</h4>
+            <p>Managed schedules, led performance reviews, and resolved team conflicts. Oversaw cash flow, customer interactions, and compliance with health and safety protocols. Trained staff to follow workflows and deliver customer-focused service.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">2025</span>
+            <span class="vol-year">PRESENT</span>
+          </div>
+          <div class="vol-content">
+            <h4>Student Leadership Board &mdash; Cummings &amp; Clark Scholars, JHU</h4>
+            <p>Serving on the Cummings Scholars Student Leadership Board while also serving as a Clark Scholars Peer Leader. Mentoring incoming scholars, leading orientation and academic prep sessions, and fostering community excellence.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">SUMMER</span>
+            <span class="vol-year">2024</span>
+          </div>
+          <div class="vol-content">
+            <h4>STEM Lab Tech Intern &mdash; Divaneering Impact Lab, Baltimore, MD</h4>
+            <p>Led STEM lessons in physics, chemistry, and engineering for youth programs. Promoted female participation in STEM through hands-on projects. Designed interdisciplinary activities linking cosmetics and electrical engineering.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">SUMMER</span>
+            <span class="vol-year">2024</span>
+          </div>
+          <div class="vol-content">
+            <h4>Surgical Pathology Lab Intern &mdash; Johns Hopkins University</h4>
+            <p>Completed EPIC training modules for efficient lab workflows. Processed tissue samples, coordinated deliveries, and ensured quality control. Participated in professional development sessions and department seminars.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">AUG 2023</span>
+            <span class="vol-year">PRESENT</span>
+          </div>
+          <div class="vol-content">
+            <h4>Anna Deavere Smith Teen Pipeline &mdash; Performing Arts Intensive, CA</h4>
+            <p>Selected for an ongoing intensive exploring storytelling through movement, voice, and lived experience with renowned artist Anna Deavere Smith. Growing as a speaker, artist, and communicator.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">2023</span>
+            <span class="vol-year">2024</span>
+          </div>
+          <div class="vol-content">
+            <h4>Congressional App Challenge Winner &mdash; Maryland's 2nd District</h4>
+            <p>Won the U.S. Congressional App Challenge for building the Patrol App &mdash; a tool to improve public safety. Presented to congressional leaders and received formal recognition from Congressman Dutch Ruppersberger.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">SUMMER</span>
+            <span class="vol-year">2023</span>
+          </div>
+          <div class="vol-content">
+            <h4>Theoretical Computer Science Intern &mdash; Johns Hopkins University</h4>
+            <p>Researched and implemented optimization algorithms (greedy, shortest path). Built solutions in Python using Google Colab, analyzing performance trade-offs. Collaborated with faculty on theoretical applications to real-world systems.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">SPRING</span>
+            <span class="vol-year">2023</span>
+          </div>
+          <div class="vol-content">
+            <h4>Psychological &amp; Brain Sciences Intern &mdash; Johns Hopkins University</h4>
+            <p>Designed a miniature robot for cognitive science research. Developed Python algorithms supporting behavioral studies. Partnered with senior researchers to connect robotics and human behavior.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">2022</span>
+            <span class="vol-year">2024</span>
+          </div>
+          <div class="vol-content">
+            <h4>Sales Associate &mdash; Foot Locker, Baltimore, MD</h4>
+            <p>Operated POS/mobile systems, optimized inventory, and ensured smooth transactions. Provided customer service and supported store operations.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">SUMMER</span>
+            <span class="vol-year">2022</span>
+          </div>
+          <div class="vol-content">
+            <h4>Environmental Engineering Intern &mdash; Johns Hopkins University</h4>
+            <p>Researched greenhouse gas emissions in Baltimore and presented findings. Built Excel dashboards for visualizing environmental trends. Participated in weekly team strategy sessions.</p>
+          </div>
+        </div>
+        <div class="vol-event" data-reveal>
+          <div class="vol-date">
+            <span class="vol-month">2024</span>
+            <span class="vol-year">2028</span>
+          </div>
+          <div class="vol-content">
+            <h4>B.A. Cognitive Science &amp; Writing Seminars &mdash; Johns Hopkins University</h4>
+            <p>Exploring the intersection of mind, language, and technology through cognitive science alongside creative and analytical writing. Engaged in undergraduate research and STEM advocacy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <canvas id="skillsCanvas"></canvas>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">03</span>
+        <h2>Skills &amp; Tools</h2>
+      </div>
+      <p class="skills-intro" data-reveal>Each region of the brain processes different skills &mdash; hover to explore how mine are wired.</p>
+      <p class="scroll-hint" data-reveal>Scroll to explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></p>
+
+      <div class="brain-wrapper" data-reveal>
+        <!-- SVG Brain -->
+        <svg class="brain-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Full brain outline (visible shape) -->
+          <path d="M250 60 Q180 55 140 90 Q100 120 105 170 Q100 210 120 240 Q110 270 130 290 Q140 320 175 320 Q190 340 220 335 Q235 330 235 310 Q230 280 240 260 Q250 255 260 260 Q270 280 265 310 Q270 330 285 335 Q315 340 330 320 Q365 320 375 290 Q395 270 385 240 Q405 210 400 170 Q405 120 365 90 Q325 55 250 60 Z" 
+                fill="none" stroke="rgba(212,175,55,0.15)" stroke-width="1"/>
+          <!-- Brain stem -->
+          <path d="M235 310 Q230 340 240 370 Q250 385 260 370 Q270 340 265 310 Z" 
+                class="brain-region" data-region="stem" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
+          <!-- Cerebellum -->
+          <ellipse cx="205" cy="300" rx="35" ry="25" 
+                   class="brain-region" data-region="cerebellum" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
+          <!-- Occipital lobe (back) -->
+          <path d="M150 180 Q120 170 115 200 Q115 230 140 250 Q160 255 175 245 Q180 220 175 195 Q168 180 150 180 Z" 
+                class="brain-region" data-region="occipital" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
+          <!-- Temporal lobe (lower left) -->
+          <path d="M175 240 Q160 260 170 285 Q190 300 215 295 Q230 280 225 250 Q210 240 175 240 Z" 
+                class="brain-region" data-region="temporal-l" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
+          <!-- Temporal lobe (lower right) -->
+          <path d="M325 240 Q340 260 330 285 Q310 300 285 295 Q270 280 275 250 Q290 240 325 240 Z" 
+                class="brain-region" data-region="temporal-r" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
+          <!-- Parietal lobe (top) -->
+          <path d="M200 100 Q250 85 300 100 Q310 140 295 170 Q250 180 205 170 Q190 140 200 100 Z" 
+                class="brain-region" data-region="parietal" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
+          <!-- Prefrontal cortex (front left) -->
+          <path d="M175 120 Q150 100 155 140 Q165 170 185 180 Q200 175 200 140 Q195 120 175 120 Z" 
+                class="brain-region" data-region="prefrontal-l" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
+          <!-- Prefrontal cortex (front right) -->
+          <path d="M325 120 Q350 100 345 140 Q335 170 315 180 Q300 175 300 140 Q305 120 325 120 Z" 
+                class="brain-region" data-region="prefrontal-r" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
+          <!-- Central fissure -->
+          <path d="M250 100 Q245 150 250 200 Q255 250 250 300" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="1" stroke-dasharray="3,4"/>
+          <!-- Hippocampus (deep center - LLMs) -->
+          <ellipse cx="250" cy="250" rx="28" ry="20" 
+                   class="brain-region" data-region="hippocampus" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1.5"/>
+          <!-- Neuron dots scattered -->
+          <circle cx="220" cy="130" r="2" fill="rgba(212,175,55,0.5)"/>
+          <circle cx="280" cy="140" r="2" fill="rgba(212,175,55,0.5)"/>
+          <circle cx="180" cy="200" r="2" fill="rgba(212,175,55,0.4)"/>
+          <circle cx="320" cy="210" r="2" fill="rgba(212,175,55,0.4)"/>
+          <circle cx="250" cy="220" r="3" fill="rgba(212,175,55,0.6)"/>
+          <circle cx="200" cy="270" r="2" fill="rgba(212,175,55,0.4)"/>
+          <circle cx="300" cy="270" r="2" fill="rgba(212,175,55,0.4)"/>
+          <circle cx="250" cy="340" r="2" fill="rgba(212,175,55,0.4)"/>
+        </svg>
+
+        <!-- Region labels (positioned INSIDE brain outline) -->
+        <div class="brain-label" data-region="prefrontal" style="top: 23%; left: 30%; transform: translateX(-50%);">
+          <span class="bl-name">Prefrontal Cortex</span>
+        </div>
+        <div class="brain-label" data-region="parietal" style="top: 17%; left: 30%; transform: translateX(-50%);">
+          <span class="bl-name">Parietal Lobe</span>
+        </div>
+        <div class="brain-label" data-region="temporal" style="top: 39%; left: 20%; transform: translateX(-50%);">
+          <span class="bl-name">Temporal Lobe</span>
+        </div>
+        <div class="brain-label" data-region="temporal" style="top: 39%; left: 40%; transform: translateX(-50%);">
+          <span class="bl-name">Temporal Lobe</span>
+        </div>
+        <div class="brain-label" data-region="occipital" style="top: 31%; left: 11%; transform: translateX(-50%);">
+          <span class="bl-name">Occipital Lobe</span>
+        </div>
+        <div class="brain-label" data-region="cerebellum" style="top: 45%; left: 21%; transform: translateX(-50%);">
+          <span class="bl-name">Cerebellum</span>
+        </div>
+        <div class="brain-label" data-region="stem" style="top: 51%; left: 30%; transform: translateX(-50%);">
+          <span class="bl-name">Brain Stem</span>
+        </div>
+        <div class="brain-label" data-region="hippocampus" style="top: 37%; left: 30%; transform: translateX(-50%);">
+          <span class="bl-name">Hippocampus</span>
+        </div>
+
+        <!-- Skill clusters positioned around brain -->
+        <!-- Prefrontal: Core Skills (top center) -->
+        <div class="brain-skills" data-region="prefrontal" style="top: 0; left: 50%; transform: translateX(-50%); max-width: 280px; text-align: center;">
+          <div class="bs-title" style="text-align: center;">Core Skills</div>
+          <div class="bs-tags" style="justify-content: center;">
+            <span class="skill-tag">Cross-disciplinary</span>
+            <span class="skill-tag">Applied Problem Solving</span>
+            <span class="skill-tag">Technical Communication</span>
+            <span class="skill-tag">Rapid Learning</span>
+            <span class="skill-tag">Self-directed</span>
+            <span class="skill-tag">Adaptable</span>
+          </div>
+        </div>
+
+        <!-- Parietal: Specialized Skills (top right, well below core skills) -->
+        <div class="brain-skills" data-region="parietal" style="top: 18%; right: 0; max-width: 250px;">
+          <div class="bs-title">Specialized Skills</div>
+          <div class="bs-tags">
+            <span class="skill-tag">Full-stack development</span>
+            <span class="skill-tag">Optimization Algorithms</span>
+            <span class="skill-tag">Algorithm Implementation</span>
+            <span class="skill-tag">Performance Trade-off Analysis</span>
+            <span class="skill-tag">Object-Oriented Programming</span>
+            <span class="skill-tag">UI/UX</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag skill-new">LLM Agent Integration</span>
+            <span class="skill-tag skill-new">Multi-model AI Routing (7+ models)</span>
+            <span class="skill-tag skill-new">Real-time Streaming (WebSockets/SSE)</span>
+            <span class="skill-tag skill-new">Multi-Tenant Architecture</span>
+            <span class="skill-tag skill-new">Process Isolation</span>
+            <span class="skill-tag skill-new">Auth Systems (JWT)</span>
+            <span class="skill-tag skill-new">3D Printing Prototyping</span>
+            <span class="skill-tag skill-new">Autodesk Fusion (CAD)</span>
+            <span class="skill-tag skill-new">Technical Writing</span>
+          </div>
+        </div>
+
+        <!-- Temporal: Languages (upper left, utilizing space) -->
+        <div class="brain-skills" data-region="temporal" style="top: 5%; left: 0; max-width: 200px;">
+          <div class="bs-title">Languages</div>
+          <div class="bs-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Ruby</span>
+            <span class="skill-tag">Ruby on Rails</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag skill-new">TypeScript</span>
+            <span class="skill-tag skill-new">SQL</span>
+            <span class="skill-tag skill-new">Shell</span>
+          </div>
+        </div>
+
+        <!-- Occipital: Frameworks & Tools (lower left, connected to temporal) -->
+        <div class="brain-skills" data-region="occipital" style="top: 55%; left: 0; max-width: 250px;">
+          <div class="bs-title">Frameworks &amp; Tools</div>
+          <div class="bs-tags">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">Bitbucket</span>
+            <span class="skill-tag">Git/GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">IntelliJ IDEA</span>
+            <span class="skill-tag skill-new">OpenCode</span>
+            <span class="skill-tag skill-new">Flask</span>
+            <span class="skill-tag skill-new">gevent</span>
+            <span class="skill-tag skill-new">Next.js</span>
+            <span class="skill-tag skill-new">React</span>
+            <span class="skill-tag skill-new">Tailwind CSS</span>
+            <span class="skill-tag skill-new">Postgres / Supabase</span>
+            <span class="skill-tag skill-new">Framer Motion</span>
+            <span class="skill-tag skill-new">Linux</span>
+            <span class="skill-tag skill-new">systemd</span>
+            <span class="skill-tag skill-new">Deployment Pipelines</span>
+            <span class="skill-tag skill-new">Process / Container Management</span>
+          </div>
+        </div>
+
+        <!-- Cerebellum: Productivity (center-right, next to Frameworks & Tools) -->
+        <div class="brain-skills" data-region="cerebellum" style="top: 55%; right: 0; max-width: 220px;">
+          <div class="bs-title">Productivity</div>
+          <div class="bs-tags">
+            <span class="skill-tag">Google Suite</span>
+            <span class="skill-tag">Excel (advanced)</span>
+            <span class="skill-tag">Presentation &amp; research tools</span>
+            <span class="skill-tag skill-new">Agile methodology</span>
+            <span class="skill-tag skill-new">Regression testing</span>
+            <span class="skill-tag skill-new">Architecture documentation</span>
+          </div>
+        </div>
+
+        <!-- Brain Stem: Foundation (bottom right) -->
+        <div class="brain-skills" data-region="stem" style="bottom: 12%; right: 2%; max-width: 200px;">
+          <div class="bs-title">Foundation</div>
+          <div class="bs-tags">
+            <span class="skill-tag">Self-taught learner</span>
+            <span class="skill-tag">Cross-disciplinary</span>
+            <span class="skill-tag">Adaptable</span>
+            <span class="skill-tag">Resilient</span>
+          </div>
+        </div>
+
+        <!-- Hippocampus: LLMs (bottom center, well below brain) -->
+        <div class="brain-skills" data-region="hippocampus" style="bottom: 0; left: 50%; transform: translateX(-50%); max-width: 300px; text-align: center;">
+          <div class="bs-title" style="text-align: center;">LLMs</div>
+          <div class="bs-tags" style="justify-content: center;">
+            <span class="skill-tag skill-new">deepseek-v4-flash</span>
+            <span class="skill-tag skill-new">deepseek-v4-pro</span>
+            <span class="skill-tag skill-new">glm-5.2</span>
+            <span class="skill-tag skill-new">kimi-k3</span>
+            <span class="skill-tag skill-new">kimi-k2.7-code</span>
+            <span class="skill-tag skill-new">qwen3.6-27b</span>
+            <span class="skill-tag skill-new">gemma-4-31b-it</span>
+            <span class="skill-tag skill-new">gpt-oss-120b</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile fallback: stacked cards -->
+      <div class="skills-mobile">
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Prefrontal Cortex &mdash; Core Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Cross-disciplinary</span>
+            <span class="skill-tag">Applied Problem Solving</span>
+            <span class="skill-tag">Technical Communication</span>
+            <span class="skill-tag">Rapid Learning</span>
+            <span class="skill-tag">Self-directed</span>
+            <span class="skill-tag">Adaptable</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Parietal Lobe &mdash; Specialized Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Full-stack development</span>
+            <span class="skill-tag">Optimization Algorithms</span>
+            <span class="skill-tag">Algorithm Implementation</span>
+            <span class="skill-tag">Performance Trade-off Analysis</span>
+            <span class="skill-tag">Object-Oriented Programming</span>
+            <span class="skill-tag">UI/UX</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag skill-new">LLM Agent Integration</span>
+            <span class="skill-tag skill-new">Multi-model AI Routing (7+ models)</span>
+            <span class="skill-tag skill-new">Real-time Streaming (WebSockets/SSE)</span>
+            <span class="skill-tag skill-new">Multi-Tenant Architecture</span>
+            <span class="skill-tag skill-new">Process Isolation</span>
+            <span class="skill-tag skill-new">Auth Systems (JWT)</span>
+            <span class="skill-tag skill-new">3D Printing Prototyping</span>
+            <span class="skill-tag skill-new">Autodesk Fusion (CAD)</span>
+            <span class="skill-tag skill-new">Technical Writing</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Temporal Lobe &mdash; Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Ruby</span>
+            <span class="skill-tag">Ruby on Rails</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag skill-new">TypeScript</span>
+            <span class="skill-tag skill-new">SQL</span>
+            <span class="skill-tag skill-new">Shell</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Occipital Lobe &mdash; Frameworks &amp; Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">Bitbucket</span>
+            <span class="skill-tag">Git/GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">IntelliJ IDEA</span>
+            <span class="skill-tag skill-new">OpenCode</span>
+            <span class="skill-tag skill-new">Flask</span>
+            <span class="skill-tag skill-new">gevent</span>
+            <span class="skill-tag skill-new">Next.js</span>
+            <span class="skill-tag skill-new">React</span>
+            <span class="skill-tag skill-new">Tailwind CSS</span>
+            <span class="skill-tag skill-new">Postgres / Supabase</span>
+            <span class="skill-tag skill-new">Framer Motion</span>
+            <span class="skill-tag skill-new">Linux</span>
+            <span class="skill-tag skill-new">systemd</span>
+            <span class="skill-tag skill-new">Deployment Pipelines</span>
+            <span class="skill-tag skill-new">Process / Container Management</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Cerebellum &mdash; Productivity</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Google Suite</span>
+            <span class="skill-tag">Excel (advanced)</span>
+            <span class="skill-tag">Presentation &amp; research tools</span>
+            <span class="skill-tag skill-new">Agile methodology</span>
+            <span class="skill-tag skill-new">Regression testing</span>
+            <span class="skill-tag skill-new">Architecture documentation</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title">Hippocampus &mdash; LLMs</h3>
+          <div class="skill-tags">
+            <span class="skill-tag skill-new">deepseek-v4-flash</span>
+            <span class="skill-tag skill-new">deepseek-v4-pro</span>
+            <span class="skill-tag skill-new">glm-5.2</span>
+            <span class="skill-tag skill-new">kimi-k3</span>
+            <span class="skill-tag skill-new">kimi-k2.7-code</span>
+            <span class="skill-tag skill-new">qwen3.6-27b</span>
+            <span class="skill-tag skill-new">gemma-4-31b-it</span>
+            <span class="skill-tag skill-new">gpt-oss-120b</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COURSEWORK ===== -->
+  <section id="coursework">
+    <canvas id="courseworkCanvas"></canvas>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">&#9733;</span>
+        <h2>Coursework</h2>
+      </div>
+      <div class="coursework-grid">
+        <div class="coursework-col" data-reveal>
+          <h3 class="coursework-title">Johns Hopkins University</h3>
+          <ul class="course-list">
+            <li><span class="course-name">Gateway Java</span><span class="course-term">2024</span></li>
+            <li><span class="course-name">Calculus I (Engineering)</span><span class="course-term">2024</span></li>
+            <li><span class="course-name">Calculus II (Engineering)</span><span class="course-term">2025</span></li>
+            <li><span class="course-name">Physics I (Engineering)</span><span class="course-term">2024</span></li>
+            <li><span class="course-name">Physics I Lab (Engineering)</span><span class="course-term">2024</span></li>
+            <li><span class="course-name">Computer Ethics</span><span class="course-term">2025</span></li>
+            <li><span class="course-name">Language, Media &amp; AI Lab</span><span class="course-term">2026</span></li>
+            <li><span class="course-name">Engineering Design I</span><span class="course-term">2024</span></li>
+            <li><span class="course-name">Engineering Design II</span><span class="course-term">2025</span></li>
+            <li><span class="course-name">Engineering Design III (Chile)</span><span class="course-term">2026</span></li>
+          </ul>
+        </div>
+        <div class="coursework-col" data-reveal>
+          <h3 class="coursework-title">Western High School</h3>
+          <ul class="course-list">
+            <li><span class="course-name">AP Computer Science Principles</span><span class="course-term">2021&ndash;2022</span></li>
+            <li><span class="course-name">Computer Science Essentials</span><span class="course-term">2020&ndash;2021</span></li>
+            <li><span class="course-name">Application Development 1</span><span class="course-term">2023&ndash;2024</span></li>
+            <li><span class="course-name">Application Development 2</span><span class="course-term">2023&ndash;2024</span></li>
+            <li><span class="course-name">Foundations of Computer Science</span><span class="course-term">2023&ndash;2024</span></li>
+            <li><span class="course-name">AP Computer Science A</span><span class="course-term">2022&ndash;2023</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">04</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="project-filters" data-reveal>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="robotics">Robotics</button>
+        <button class="filter-btn" data-filter="software">Software</button>
+        <button class="filter-btn" data-filter="research">Research</button>
+      </div>
+      <p class="scroll-hint" data-reveal>Scroll to explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></p>
+      <div class="project-grid">
+        <div class="project-card" data-category="software" data-reveal>
+          <div class="pc-num">01</div>
+          <h3>Pulse</h3>
+          <p>Contributed to Pulse, an AI-enhanced platform for customer experience managers. Developed auto-generated surveys, AI-summarized responses, and data visualizations. Built features using Ruby on Rails, JavaScript, and HTML in an agile environment.</p>
+          <div class="pc-tags">
+            <span>Ruby on Rails</span>
+            <span>JavaScript</span>
+            <span>Docker</span>
+          </div>
+          <div class="pc-achievement">&#9733; nVeris Tech &bull; 2025</div>
+        </div>
+        <div class="project-card" data-category="software ai" data-reveal>
+          <div class="pc-num">02</div>
+          <h3>Patrol App</h3>
+          <p>Congressional App Challenge winning project. A public safety tool designed to improve community security. Presented to U.S. congressional leaders and recognized by Congressman Dutch Ruppersberger.</p>
+          <div class="pc-tags">
+            <span>Python</span>
+            <span>Public Safety</span>
+            <span>UI/UX</span>
+          </div>
+          <div class="pc-achievement">&#9733; CAC Winner &bull; MD-02</div>
+          <a href="https://www.congressionalappchallenge.us/23-md02/" target="_blank" rel="noopener" class="pc-link" aria-label="View Patrol App on Congressional App Challenge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="project-card" data-category="software ai" data-reveal>
+          <div class="pc-num">03</div>
+          <h3>ArcAIdia</h3>
+          <p>An immersive office-themed arcade built for the 2026 Japan Hackathon. Features a top-down office hub, three mini-games (sliding-block puzzle, lane-crossing arcade, turn-based JRPG), and a claw-machine sticker shop. All graphics and audio are procedurally generated in code.</p>
+          <div class="pc-tags">
+            <span>JavaScript</span>
+            <span>Game AI</span>
+            <span>Canvas</span>
+          </div>
+          <div class="pc-achievement">&#9733; 2026 Japan Hackathon</div>
+          <a href="https://arcadia-2026-japan-hackathon-556245b2.onbld.com" target="_blank" rel="noopener" class="pc-link" aria-label="Play ArcAIdia live">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="project-card" data-category="ai software" data-reveal>
+          <div class="pc-num">04</div>
+          <h3>Somora</h3>
+          <p>An animated AI education universe where children learn Artificial Intelligence by exploring worlds, playing games, running experiments, and building real AI projects. A 12-module learning ecosystem built with Next.js and React.</p>
+          <div class="pc-tags">
+            <span>TypeScript</span>
+            <span>Next.js</span>
+            <span>AI/ML</span>
+          </div>
+          <div class="pc-achievement">&#9733; AI Education Platform</div>
+          <a href="https://somora-823409ce.onbld.com" target="_blank" rel="noopener" class="pc-link" aria-label="View Somora live">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="project-card" data-category="ai software" data-reveal>
+          <div class="pc-num">05</div>
+          <h3>Autonomous AI Agent</h3>
+          <p>Deployment configuration for an autonomous AI agent running on a virtual machine with Slack messaging integration. Uses an open-source large language model via an OpenAI-compatible API for real-time human-AI interaction.</p>
+          <div class="pc-tags">
+            <span>LLM</span>
+            <span>Shell</span>
+            <span>Automation</span>
+          </div>
+          <div class="pc-achievement">&#9733; AI Agent Deployment</div>
+          <a href="https://github.com/drBYTEbot/hermes-agent-vm" target="_blank" rel="noopener" class="pc-link" aria-label="View code on GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="project-card" data-category="software ai" data-reveal>
+          <div class="pc-num">06</div>
+          <h3>Mother &amp; Bloom</h3>
+          <p>A premium motherhood application prototype with 20 product screens, a full design system, and an integrated AI assistant. Built as a production-ready, investor-presentable mobile app prototype.</p>
+          <div class="pc-tags">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Design System</span>
+          </div>
+          <div class="pc-achievement">&#9733; Mobile App Prototype</div>
+          <a href="https://mother-and-bloom-8f17c716.onbld.com" target="_blank" rel="noopener" class="pc-link" aria-label="View Mother & Bloom live">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="project-card" data-category="ai software" data-reveal>
+          <div class="pc-num">07</div>
+          <h3>AI&amp; Studio</h3>
+          <p>Built an AI-powered web application during my internship at ai&amp;. Contributed to frontend development, backend engineering, UI/UX design, API integration, package management, and deployment infrastructure on a 3-person intern team.</p>
+          <div class="pc-tags">
+            <span>Python</span>
+            <span>Frontend</span>
+            <span>Backend</span>
+            <span>UI/UX</span>
+            <span>APIs</span>
+          </div>
+          <div class="pc-achievement">&#9733; ai&amp; &bull; Summer 2026</div>
+        </div>
+        <div class="project-card" data-category="research" data-reveal>
+          <div class="pc-num">08</div>
+          <h3>Surgical Pathology Lab Research</h3>
+          <p>Interned at a JHU surgical pathology lab. Processed tissue samples, coordinated deliveries, and ensured quality control. Completed EPIC training modules for efficient lab workflows.</p>
+          <div class="pc-tags">
+            <span>Pathology</span>
+            <span>Lab Work</span>
+            <span>Quality Control</span>
+          </div>
+          <div class="pc-achievement">&#9733; JHU &bull; Summer 2024</div>
+        </div>
+        <div class="project-card" data-category="research" data-reveal>
+          <div class="pc-num">09</div>
+          <h3>STEM Education &amp; Outreach</h3>
+          <p>Led STEM lessons in physics, chemistry, and engineering for youth programs at the Divaneering Impact Lab. Promoted female participation in STEM through hands-on projects and interdisciplinary activities.</p>
+          <div class="pc-tags">
+            <span>STEM Education</span>
+            <span>Teaching</span>
+            <span>Outreach</span>
+          </div>
+          <div class="pc-achievement">&#9733; Divaneering &bull; Summer 2024</div>
+        </div>
+        <div class="project-card" data-category="research" data-reveal>
+          <div class="pc-num">10</div>
+          <h3>Optimization Algorithms Research</h3>
+          <p>Researched and implemented optimization algorithms including greedy and shortest-path approaches. Built solutions in Python using Google Colab, analyzing performance trade-offs. Collaborated with JHU faculty on theoretical applications.</p>
+          <div class="pc-tags">
+            <span>Python</span>
+            <span>Algorithms</span>
+            <span>Optimization</span>
+          </div>
+          <div class="pc-achievement">&#9733; JHU &bull; Summer 2023</div>
+        </div>
+        <div class="project-card" data-category="research robotics" data-reveal>
+          <div class="pc-num">11</div>
+          <h3>Cognitive Robotics Research</h3>
+          <p>Designed a miniature robot for cognitive science research in JHU's Psychological &amp; Brain Sciences department. Developed Python algorithms supporting behavioral studies connecting robotics and human behavior.</p>
+          <div class="pc-tags">
+            <span>Python</span>
+            <span>Robotics</span>
+            <span>Cognitive Science</span>
+          </div>
+          <div class="pc-achievement">&#9733; JHU &bull; Spring 2023</div>
+        </div>
+        <div class="project-card" data-category="research" data-reveal>
+          <div class="pc-num">12</div>
+          <h3>Environmental Engineering Research</h3>
+          <p>Researched greenhouse gas emissions in Baltimore and presented findings. Built Excel dashboards for visualizing environmental trends. Participated in weekly team strategy sessions at JHU.</p>
+          <div class="pc-tags">
+            <span>Environmental</span>
+            <span>Data Analysis</span>
+            <span>Excel</span>
+          </div>
+          <div class="pc-achievement">&#9733; JHU &bull; Summer 2022</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEADERSHIP ===== -->
+  <section id="leadership">
+    <canvas id="leaderCanvas"></canvas>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">05</span>
+        <h2>Leadership</h2>
+      </div>
+      <div class="leader-grid">
+        <div class="leader-card" data-reveal>
+          <div class="leader-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="leader-period">2017 &mdash; 2024</div>
+          <h3>Robotics Team Leader</h3>
+          <p>Active member since 2017, serving as team leader. Led robotics builds, mentored younger members, and competed in regional competitions over 7 years.</p>
+        </div>
+        <div class="leader-card" data-reveal>
+          <div class="leader-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <div class="leader-period">2023 &mdash; 2024</div>
+          <h3>NHS Treasurer</h3>
+          <p>National Honor Society Treasurer. Managed chapter finances, coordinated community service initiatives, and oversaw fundraising events.</p>
+        </div>
+        <div class="leader-card" data-reveal>
+          <div class="leader-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <div class="leader-period">2016 &mdash; 2024</div>
+          <h3>Drum Major</h3>
+          <p>Drum Major since 2016 with the Baltimore Twilighters Marching Band, and competitive dancer. Served in Executive Board roles.</p>
+        </div>
+        <div class="leader-card" data-reveal>
+          <div class="leader-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </div>
+          <div class="leader-period">2025 &mdash; 2026</div>
+          <h3>Music Director &mdash; JHU Hip-Hop Dance Team</h3>
+          <p>Music Director for the JHU Competitive Hip-Hop Dance Team. Responsible for music selection, audio editing, and choreography synchronization.</p>
+        </div>
+        <div class="leader-card" data-reveal>
+          <div class="leader-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="leader-period">2024 &mdash; Present</div>
+          <h3>Clark Scholars Cohort Leader</h3>
+          <p>Cohort Leader for the JHU Clark Scholars Class of 2028. Supporting peer mentorship and orientation sessions for incoming scholars.</p>
+        </div>
+        <div class="leader-card" data-reveal>
+          <div class="leader-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          </div>
+          <div class="leader-period">2024 &mdash; Present</div>
+          <h3>Cummings Scholars Leadership Board</h3>
+          <p>Student Leadership Board Member for the Cummings Scholars Program at JHU. Shaping program initiatives and driving community engagement.</p>
+        </div>
+        <div class="leader-card" data-reveal>
+          <div class="leader-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z" fill="none"/><path d="M4 9h16M9 4v16"/></svg>
+          </div>
+          <div class="leader-period">Summer 2026</div>
+          <h3>AI Product Leadership &mdash; ai&amp;</h3>
+          <p>Led a 3-person intern team with 190 commits on a production AI platform. Managed authentication, database, analytics, and process isolation architecture.</p>
+        </div>
+        <div class="leader-card" data-reveal>
+          <div class="leader-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="leader-period">2025</div>
+          <h3>"Be the Bridge" Ambassador</h3>
+          <p>Ambassador for Code in the Schools, Baltimore. Bridging the gap between Baltimore youth and technology education through STEM outreach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMUNITY & VOLUNTEER ===== -->
+  <section id="community">
+    <canvas id="communityCanvas"></canvas>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">&#9827;</span>
+        <h2>Community &amp; Volunteer Work</h2>
+      </div>
+
+      <div class="community-split">
+        <!-- Volunteer Events Timeline -->
+        <div class="volunteer-timeline" data-reveal>
+          <h3 class="volunteer-title">2026 Volunteer Events</h3>
+          <div class="vol-events">
+            <div class="vol-event">
+              <div class="vol-date">
+                <span class="vol-month">MAY</span>
+                <span class="vol-year">2026</span>
+              </div>
+              <div class="vol-content">
+                <h4>STEM Grade School Engineering Event</h4>
+                <p>Watershed Activity Center for Educational Outreach</p>
+              </div>
+            </div>
+            <div class="vol-event">
+              <div class="vol-date">
+                <span class="vol-month">MAY</span>
+                <span class="vol-year">2026</span>
+              </div>
+              <div class="vol-content">
+                <h4>Cummings Scholars Banquet</h4>
+                <p>Set up &amp; take down + delivering awards</p>
+              </div>
+            </div>
+            <div class="vol-event">
+              <div class="vol-date">
+                <span class="vol-month">MAY</span>
+                <span class="vol-year">2026</span>
+              </div>
+              <div class="vol-content">
+                <h4>CTY / Baltimore Emerging Scholars Ceremony</h4>
+                <p>Panelist &amp; guest speaker discussing college experience to youth</p>
+              </div>
+            </div>
+            <div class="vol-event">
+              <div class="vol-date">
+                <span class="vol-month">JUN</span>
+                <span class="vol-year">2026</span>
+              </div>
+              <div class="vol-content">
+                <h4>Project X / Boast Campus Visit</h4>
+                <p>STEM grade school engineering event</p>
+              </div>
+            </div>
+            <div class="vol-event">
+              <div class="vol-date">
+                <span class="vol-month">JUN</span>
+                <span class="vol-year">2026</span>
+              </div>
+              <div class="vol-content">
+                <h4>BFSA Juneteenth Event</h4>
+                <p>STEM elementary school demo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ongoing Community Work -->
+        <div class="community-stories" data-reveal>
+          <h3 class="volunteer-title">Ongoing &amp; Past Work</h3>
+          <div class="community-list">
+            <div class="community-item">
+              <div class="community-icon">&#9829;</div>
+              <p>Volunteered with <strong>Amazon</strong> and local homeless shelters to distribute essentials to underserved communities.</p>
+            </div>
+            <div class="community-item">
+              <div class="community-icon">&#9883;</div>
+              <p>Connected <strong>NICU families at GBMC</strong> by creating "Bonding Hearts" for premature babies.</p>
+            </div>
+            <div class="community-item">
+              <div class="community-icon">&#8962;</div>
+              <p>Formulated toiletry kits for the <strong>Ronald McDonald House</strong> in Baltimore, MD.</p>
+            </div>
+            <div class="community-item">
+              <div class="community-icon">&#9728;</div>
+              <p>Packaged over <strong>60,000 diapers</strong> in Durham, NC for families in need.</p>
+            </div>
+            <div class="community-item">
+              <div class="community-icon">&#127793;</div>
+              <p>Planted green-life for a <strong>pocket forest</strong> in Santiago, Chile.</p>
+            </div>
+            <div class="community-item">
+              <div class="community-icon">&#9997;</div>
+              <p>Organized peer tutoring, school cleanups, and local charity events throughout high school.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI & RESEARCH ===== -->
+  <section id="ai-research">
+    <canvas id="neuralCanvas"></canvas>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">06</span>
+        <h2>AI &amp; Research</h2>
+      </div>
+      <div class="research-grid">
+        <div class="research-card" data-reveal>
+          <div class="research-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 0 1 10 10c0 2.5-1 4.8-2.5 6.5"/><path d="M12 2a10 10 0 0 0-10 10c0 2.5 1 4.8 2.5 6.5"/><path d="M2 12h20"/><path d="M12 22a10 10 0 0 1-7.5-3.5"/><path d="M12 22a10 10 0 0 0 7.5-3.5"/></svg>
+          </div>
+          <h3>Artificial Intelligence</h3>
+          <p>Deeply interested in the intersection of machine learning, natural language processing, and ethical AI development. Exploring how models can understand and augment human capabilities.</p>
+        </div>
+        <div class="research-card" data-reveal>
+          <div class="research-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Robotics</h3>
+          <p>Passionate about embodied AI and autonomous systems. Fascinated by the challenge of bridging perception, planning, and physical action in real-world environments.</p>
+        </div>
+        <div class="research-card" data-reveal>
+          <div class="research-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>PhD Aspirations</h3>
+          <p>Planning to pursue a PhD at the intersection of cognitive science, AI, and robotics. Driven by the goal of advancing human-robot collaboration and intelligent systems research.</p>
+        </div>
+        <div class="research-card" data-reveal>
+          <div class="research-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3h6v6"/><path d="M15 21H9v-6"/><path d="M21 9v6h-6"/><path d="M3 15V9h6"/></svg>
+          </div>
+          <h3>STEM Advocacy</h3>
+          <p>Committed to increasing women's representation in AI and STEM. Only 22% of AI professionals are women &mdash; I'm working to change that through mentorship and visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GAME SECTION ===== -->
+  <section id="game-section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">&#9733;</span>
+        <h2>The Game That Started My Love for Technology</h2>
+      </div>
+      <div class="game-container" data-reveal>
+        <div class="game-explanation">
+          <p>The Chrome Dinosaur Game was more than just a time-killer. It was my first encounter with procedural generation, reaction-based mechanics, and the magic of something from nothing. A simple T-Rex running across an endless desert — it taught me that the best technology feels invisible.</p>
+        </div>
+        <div class="game-wrapper">
+          <div class="game" id="dinoGame">
+            <div class="game-score">Score: <span id="score">0</span></div>
+            <div class="game-highscore">Best: <span id="highscore">0</span></div>
+            <canvas id="gameCanvas" width="600" height="200"></canvas>
+            <button class="game-start-btn" id="gameStart">Play Game</button>
+            <p class="game-hint">Press <kbd>Space</kbd> or tap to jump</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-number">07</span>
+        <h2>Connect</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-links" data-reveal>
+          <a href="mailto:saria@aiand.com" class="contact-link">
+            <span class="cl-icon">&#9993;</span>
+            <span class="cl-text">saria@aiand.com</span>
+            <span class="cl-copy" data-copy="saria@aiand.com">Copy</span>
+          </a>
+          <a href="https://github.com/drBYTEbot" target="_blank" rel="noopener" class="contact-link">
+            <span class="cl-icon">&lt;/&gt;</span>
+            <span class="cl-text">github.com/drBYTEbot</span>
+            <span class="cl-verified">Verified</span>
+          </a>
+          <a href="https://linkedin.com/in/sariamalik" target="_blank" rel="noopener" class="contact-link">
+            <span class="cl-icon">&#8855;</span>
+            <span class="cl-text">linkedin.com/in/sariamalik</span>
+            <span class="cl-verified">Verified</span>
+          </a>
+          <a href="https://sariamalik.my.canva.site" target="_blank" rel="noopener" class="contact-link">
+            <span class="cl-icon">&#9671;</span>
+            <span class="cl-text">sariamalik.my.canva.site</span>
+            <span class="cl-verified">Verified</span>
+          </a>
+        </div>
+        <div class="contact-message" data-reveal>
+          <p>Always open to collaborating on interesting projects, research ideas, and conversations at the intersection of art and engineering.</p>
+          <p class="contact-signature">Saria Malik</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Saria Malik &copy; 2026 &mdash; The Artist &amp; The Engineer</p>
+    </div>
+  </footer>
+
+  <a href="index.html#mind" class="back-to-mind" style="position:fixed;bottom:18px;right:18px;z-index:9999;background:#D4AF37;color:#0b0d12;font-family:'DM Mono',monospace;font-size:.8rem;letter-spacing:.06em;padding:10px 16px;border-radius:30px;text-decoration:none;box-shadow:0 6px 24px rgba(0,0,0,.4)">&#8592; Back to Mind</a>
+
+  <script src="build.js?v=5"></script>
+  <script>
+    // Page view uses the site's native ambient sound (music icon), NOT the SPA arcade track.
+    // Because the user just clicked "View as page" on the same origin, the browser typically
+    // permits autoplay here, so we start the native calm music right away — with a first-gesture
+    // fallback in case a stricter browser blocks it.
+    (function () {
+      var t = document.getElementById('soundToggle');
+      if (!t) return;
+      function start() { if (t.classList.contains('muted')) t.click(); }
+      start();
+      function onGesture() { start(); }
+      document.addEventListener('pointerdown', onGesture, { once: true });
+      document.addEventListener('keydown', onGesture, { once: true });
+    })();
+  </script>
+</body>
+</html>
