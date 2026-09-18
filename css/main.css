@@ -324,3 +324,25 @@ kbd {
 #gameCanvas { display: block; margin: 10px auto; background: #f4efe6; border-radius: 6px; width: 100%; max-width: 600px; height: auto; }
 .game-start-btn { font-family: var(--font-mono); background: var(--gold); color: #000; border: none; padding: 8px 22px; border-radius: 20px; cursor: pointer; margin-top: 8px; }
 .game-hint { font-family: var(--font-mono); font-size: 0.72rem; color: #6b7280; margin-top: 8px; }
+
+/* Leadership detail blocks (Community & Volunteer) — shared base (traditional view, dark) */
+.ld { background: transparent; border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 14px; }
+.ld h4 { font-family: var(--font-serif); font-size: 1.12rem; margin: 0 0 4px; color: var(--gold-light); }
+.ld-sub { font-family: var(--font-mono); font-size: 0.76rem; color: var(--gold); margin: 0 0 8px; }
+.ld ul { list-style: none; padding-left: 0; margin: 0; }
+.ld ul li { position: relative; padding: 3px 0 3px 18px; font-size: 0.88rem; color: var(--text-dim); }
+.ld ul li::before { content: "\2022"; position: absolute; left: 4px; color: var(--gold); }
+/* panel/paper overrides — white bubble, ink text, aligned to ruled grid */
+.panel-card .ld { background: #fffefb; border: 1px solid rgba(120,95,30,0.45); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+.panel-card .ld h4 { color: #1b1d26; text-decoration: underline; text-underline-offset: 3px; line-height: 28px; margin: 0; }
+.panel-card .ld-sub { color: #b0453a; line-height: 28px; margin: 0 0 6px; }
+.panel-card .ld ul li { line-height: 28px; padding: 0 0 0 18px; color: #3a3f4a; }
+.panel-card .ld ul li::before { color: #b0453a; }
+
+/* Next-page navigation button between sections */
+.next-btn {
+  display: block; font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.08em;
+  color: #0b0d12; background: var(--gold); border: none; border-radius: 30px;
+  padding: 10px 22px; cursor: pointer; margin: 24px auto 0; transition: transform .2s, box-shadow .2s;
+}
+.next-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(212,175,55,0.4); }

@@ -163,6 +163,23 @@
     try { document.execCommand('copy'); } catch (e) {}
     document.body.removeChild(ta); if (cb) cb();
   }
+
+  // Next-page navigation between sections (works in panel and traditional view)
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('.next-btn');
+    if (!b) return;
+    const nextId = b.dataset.next;
+    if (!nextId) return;
+    if (b.closest('#panelBody')) {
+      open(nextId);
+      const card = panel.querySelector('.panel-card');
+      if (card) card.scrollTop = 0;
+    } else {
+      const target = document.getElementById('sec-' + nextId);
+      if (target) target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    }
+  });
+
   function closePanel() {
     if (panel.classList.contains('closing')) return;
     if (reduced) { finalClose(); return; }
