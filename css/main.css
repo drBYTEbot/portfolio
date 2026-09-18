@@ -346,3 +346,13 @@ kbd {
   padding: 10px 22px; cursor: pointer; margin: 24px auto 0; transition: transform .2s, box-shadow .2s;
 }
 .next-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(212,175,55,0.4); }
+
+/* timeline detail bullets (experience) */
+.tl-loc { font-family: var(--font-mono); font-size: 0.76rem; color: var(--gold); margin: 0 0 4px; }
+.tl ul { list-style: none; padding-left: 0; margin: 4px 0 0; }
+.tl ul li { position: relative; border-bottom: none; padding: 2px 0 2px 18px; font-size: 0.88rem; color: var(--text-dim); }
+.tl ul li::before { content: "\2022"; position: absolute; left: 4px; color: var(--gold); }
+/* panel/paper overrides — ink text, red accent, aligned to ruled grid */
+.panel-card .tl-loc { color: #b0453a; line-height: 28px; margin: 0; }
+.panel-card .tl ul li { line-height: 28px; padding: 0 0 0 18px; color: #3a3f4a; border-bottom: none; }
+.panel-card .tl ul li::before { color: #b0453a; }
